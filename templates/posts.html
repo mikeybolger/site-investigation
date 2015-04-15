@@ -1,0 +1,31 @@
+    <h1>General Details</h1>
+      <form role='form'>
+        <div class='form-group'>
+          <div class="input-group">
+            <input ng-model="postfileRef" class='form-control'>
+            <input ng-model="postprefix" class='form-control'>
+            <input ng-model="postfirstName" class='form-control'>
+            <input ng-model="postlastName" class='form-control'>
+            <input ng-model="postaddress" class='form-control'>
+            <input ng-model="posttownland" class='form-control'>
+            <input ng-model="postphone" class='form-control'>
+            <input ng-model="postfax" class='form-control'>
+            <input ng-model="postemail" class='form-control'>
+            <input ng-model="postnoResidents" class='form-control'>
+            <input ng-model="postnoDoubleBeds" class='form-control'>
+            <input ng-model="postnoSingleBeds" class='form-control'>
+            <input ng-model="postwaterSupply" class='form-control'>
+            <li>
+              <span class='input-group-btn'>
+                <button ng-click='addPost()' class='btn btn-default'>Submit</button>
+            </li>
+            </span>
+          </div>
+        </div>
+      </form>
+      <ul class='list-group'>
+        <li ng-repeat="post in posts | orderBy:'-date'" class='list-group-item'>
+          <span>{{ post.fileRef }} {{ post.prefix }} {{ post.firstName }} {{ post.lastName }} {{ post.address }} {{ post.townland }} {{ post.phone }} {{ post.fax }} {{ post.email }} {{ post.noResidents }} {{ post.noDoubleBeds }} {{ post.noSingleBeds }} {{ post.waterSupply }}</span>
+        </li>
+      </ul>
+    </div>

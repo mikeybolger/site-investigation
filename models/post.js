@@ -1,5 +1,6 @@
 var db = require('../db')
 var Post = db.model('Post', {
+	username: 		{ type: String, required: true },
   	fileRef: 		{ type: String, required: true },
 	prefix: 		{ type: String, required: true },
 	firstName: 		{ type: String, required: true },
@@ -14,7 +15,7 @@ var Post = db.model('Post', {
 	noSingleBeds: 	{ type: String, required: true },
 	waterSupply: 	{ type: String, required: true },
 	fax: 			{ type: String, required: true },
-  	date:     { type: Date,   required: true, default: Date.now }
+  	date:     		{ type: Date,   required: true, default: Date.now }
 })
 
 module.exports = Post

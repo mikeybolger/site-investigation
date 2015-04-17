@@ -4,6 +4,7 @@ angular.module('app')
     UserSvc.login(username, password)
     .then(function (user) {
       $scope.$emit('login', user)
+//      $location.path('/')
     })
   }
 })

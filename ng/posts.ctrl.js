@@ -3,6 +3,7 @@ angular.module('app')
   $scope.addPost = function () {
     if ($scope.postfileRef) {
       PostsSvc.create({
+        username: 'miketest',
         fileRef: $scope.postfileRef,
         prefix: $scope.postprefix,
         firstName: $scope.postfirstName,

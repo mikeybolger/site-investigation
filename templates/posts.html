@@ -1,31 +1,138 @@
-    <h1>General Details</h1>
-      <form role='form'>
-        <div class='form-group'>
-          <div class="input-group">
-            <input ng-model="postfileRef" class='form-control'>
-            <input ng-model="postprefix" class='form-control'>
-            <input ng-model="postfirstName" class='form-control'>
-            <input ng-model="postlastName" class='form-control'>
-            <input ng-model="postaddress" class='form-control'>
-            <input ng-model="posttownland" class='form-control'>
-            <input ng-model="postphone" class='form-control'>
-            <input ng-model="postfax" class='form-control'>
-            <input ng-model="postemail" class='form-control'>
-            <input ng-model="postnoResidents" class='form-control'>
-            <input ng-model="postnoDoubleBeds" class='form-control'>
-            <input ng-model="postnoSingleBeds" class='form-control'>
-            <input ng-model="postwaterSupply" class='form-control'>
-            <li>
-              <span class='input-group-btn'>
-                <button ng-click='addPost()' class='btn btn-default'>Submit</button>
-            </li>
-            </span>
+<h1>General Details</h1>
+<form role='form'>
+  <div class='form-group'>
+    <div class="input-group">
+      <input ng-model="postBody" class='form-control'>
+      <input ng-model="postfileRef" class='form-control'>
+      <input ng-model="postprefix" class='form-control'>            <input ng-model="postfirstName" class='form-control'>
+      <input ng-model="postlastName" class='form-control'>
+      <input ng-model="postaddress" class='form-control'>
+      <input ng-model="posttownland" class='form-control'>
+      <input ng-model="postphone" class='form-control'>
+      <input ng-model="postfax" class='form-control'>
+      <input ng-model="postemail" class='form-control'>
+      <input ng-model="postnoResidents" class='form-control'>
+      <input ng-model="postnoDoubleBeds" class='form-control'>
+      <input ng-model="postnoSingleBeds" class='form-control'>
+      <input ng-model="postwaterSupply" class='form-control'>
+      <span class='input-group-btn'>
+      <button ng-click='addPost()' class='btn btn-default'>Add Post</button>
+      </span>
+    </div>
+  </div>
+</form>
+<ul class='list-group'>
+  <li ng-repeat="post in posts | orderBy:'-date'" class='list-group-item'>
+    <span>{{ post.fileRef }} {{ post.prefix }} {{ post.firstName }} {{ post.lastName }} {{ post.address }} {{ post.townland }} {{ post.phone }} {{ post.fax }} {{ post.email }} {{ post.noResidents }} {{ post.noDoubleBeds }} {{ post.noSingleBeds }} {{ post.waterSupply }}</span>
+  </li>
+</ul>
+
+  <section class="ui segment" style="background-color: #A0A0A0;">
+    <form action="/register" method="POST">
+      <input type="checkbox" id="usCitizen" name="usCitizen"> <label
+        for="usCitizen">Tick to confirm you are a citizen of the USA</label>
+      <div class="ui two column grid">
+        <div class="column">
+          <div class="ui fluid form segment">
+            <h3 class="ui header">Sign Up</h3>
+            <div class="two fields">
+              <div class="field">
+                <label>First Name</label> <input placeholder="First Name"
+                  name="firstName" type="text" required>
+              </div>
+              <div class="field">
+                <label>Last Name</label> <input placeholder="Last Name"
+                  name="lastName" type="text" required>
+              </div>
+            </div>
+            <div class="two fields">
+              <div class="field">
+                <label>Age</label> <input placeholder="Age" type="text"
+                  name="age" required>
+              </div>
+              <div class="field">
+                <label>Location</label> <input placeholder="Location"
+                  type="text" name="location" required>
+              </div>
+            </div>
+            <div class="two fields">
+              <div class="field">
+                <label>Address 1</label> <input placeholder="Address 1"
+                  type="text" name="address1" required>
+              </div>
+              <div class="field">
+                <label>Address 2</label> <input placeholder="Address 2"
+                  type="text" name="address2" required>
+              </div>
+            </div>
+            <div class="two fields">
+              <div class="field">
+                <label>County</label> <input placeholder="County" type="text"
+                  name="county" required>
+              </div>
+              <div class="field">
+                <label>Postal/Zip Code</label> <input
+                  placeholder="Postal/Zip Code" type="text" name="postalCode"
+                  required>
+              </div>
+            </div>
+            <div class="two fields">
+              <div class="field">
+                <label>Country</label> <input placeholder="Country" type="text"
+                  name="country" required>
+              </div>
+            </div>
+            <div class="field">
+              <label>Email</label> <input placeholder="Email" name="email"
+                type="text" required>
+            </div>
+            <div class="field">
+              <label>Password</label> <input type="password" name="password"
+                required>
+            </div>
+            <div class="inline field">
+              <div class="ui checkbox">
+                <input id="conditions" type="checkbox"> <label
+                  for="conditions">I agree to the terms and conditions</label>
+              </div>
+            </div>
+            <button class="ui submit button" style="background-color:#D80000">>Submit</button>
           </div>
         </div>
-      </form>
-      <ul class='list-group'>
-        <li ng-repeat="post in posts | orderBy:'-date'" class='list-group-item'>
-          <span>{{ post.fileRef }} {{ post.prefix }} {{ post.firstName }} {{ post.lastName }} {{ post.address }} {{ post.townland }} {{ post.phone }} {{ post.fax }} {{ post.email }} {{ post.noResidents }} {{ post.noDoubleBeds }} {{ post.noSingleBeds }} {{ post.waterSupply }}</span>
-        </li>
-      </ul>
+      </div>
+    </form>
+  </section>
+
+  <section class="ui raised segment">
+  <div class="ui grid">
+    <div class="ui ten wide column">
+      <div class="ui stacked fluid form segment">
+        <form action="/register" method="POST">
+          <h3 class="ui header">Register</h3>
+          <div class="two fields">
+            <div class="field">
+              <label>First Name</label>
+              <input placeholder="First Name" type="text" name="firstName">
+            </div>
+            <div class="field">
+              <label>Last Name</label>
+              <input placeholder="Last Name" type="text" name="lastName">
+            </div>
+          </div>
+          <div class="field">
+            <label>Email</label>
+            <input placeholder="Email" type="text" name="email">
+          </div>
+          <div class="field">
+            <label>Password</label>
+            <input type="password" name="password">
+          </div>
+          <button class="ui blue submit button">Submit</button>
+        </form>
+      </div>  
     </div>
+    <aside class="ui five wide column">
+      <img src="/public/images/homer3.png" class="ui medium image">
+    </aside>
+  </div>  
+</section>

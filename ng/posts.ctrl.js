@@ -19,7 +19,7 @@ angular.module('app')
         waterSupply: $scope.postwaterSupply
       })
       .success(function (post) {
-        $scope.posts.unshift(post)
+        //$scope.posts.unshift(post)
         $scope.postfileRef = null,
         $scope.postprefix = null,
         $scope.postfirstName = null,
@@ -36,6 +36,12 @@ angular.module('app')
       })
     }
   }
+
+  $scope.$on('ws:new_project', function (_, post) {
+    $scope.$apply(function () {
+      $scope.posts.unshift(post)
+    })
+  })
 
   PostsSvc.fetch()
   .success(function (posts) {

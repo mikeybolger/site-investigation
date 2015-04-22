@@ -13,7 +13,6 @@ app.use(require('./controllers'))
 var server = app.listen(3000, function () {
 	console.log('server listening on %d', server.address().port)
 })
-require('./websockets').connect(server)
 //app.use('/api/posts', require('./controllers/api/posts'))
 //app.use(require('./controllers/static'))
 

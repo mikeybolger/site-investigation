@@ -1,10 +1,14 @@
 <h1>General Details</h1>
+
+<div style="color:red"> Signed in as {{currentUser.username}}   </div>
+
 <form role='form'>
   <div class='form-group'>
     <div class="input-group">
       <input ng-model="postBody" class='form-control'>
       <input ng-model="postfileRef" class='form-control'>
-      <input ng-model="postprefix" class='form-control'>            <input ng-model="postfirstName" class='form-control'>
+      <input ng-model="postprefix" class='form-control'>            
+      <input ng-model="postfirstName" class='form-control'>
       <input ng-model="postlastName" class='form-control'>
       <input ng-model="postaddress" class='form-control'>
       <input ng-model="posttownland" class='form-control'>
@@ -21,118 +25,470 @@
     </div>
   </div>
 </form>
+
+  <div class="contact-form">
+  <h3  style="color:white"> SITE INVESTIGATION FORM</h3>
+  <P></P>
+  <h4  style="color:white"> 1.0 GENERAL DETAILS</h4>
+    <form>
+      <input type="text" ng-model="postBody" placeholder="Body..." required>
+      <input type="text" ng-model="postfileRef" placeholder="File Reference..." required>
+      <input type="text" ng-model="postprefix" placeholder="File Reference..." required>  
+      <input type="text" ng-model="postfirstName" placeholder="First Name..." required>  
+      <input type="text" ng-model="postlastName" placeholder="Last Name..." required> 
+      <input type="text" ng-model="postaddress" placeholder="Address..." required>   
+      <input type="text" ng-model="posttownland" placeholder="Townland..." required> 
+      <input type="text" ng-model="postphone" placeholder="Phone Number..." required> 
+      <input type="text" ng-model="postfax" placeholder="Fax Number..." required>  
+      <input type="text" ng-model="postemail" placeholder="Email..." required>  
+      <input type="text" ng-model="postnoResidents" placeholder="No. of Resifents..." required>   
+      <input type="text" ng-model="postnoDoubleBeds" placeholder="No. of Double Bedrooms..." required> 
+      <input type="text" ng-model="postnoSingleBeds" placeholder="No. of Single Bedrooms..." required> 
+      <input type="text" ng-model="postwaterSupply" placeholder="Water Supply..." required> 
+  <H4  style="color:white">2.0 GENERAL DETAILS</h4>
+      <input type="text" ng-model="soilType" placeholder="Soil Type..." required>
+      <input type="text" ng-model="aquifer" placeholder="Aquifer Type..." required>
+      <input type="text" ng-model="postprefix" placeholder="File Reference..." required>  
+      <input type="text" ng-model="postfirstName" placeholder="First Name..." required>  
+      <input type="text" ng-model="postlastName" placeholder="Last Name..." required> 
+      <input type="text" ng-model="postaddress" placeholder="Address..." required>   
+      <input type="text" ng-model="posttownland" placeholder="Townland..." required> 
+      <input type="text" ng-model="postphone" placeholder="Phone Number..." required> 
+      <input type="text" ng-model="postfax" placeholder="Fax Number..." required>  
+      <input type="text" ng-model="postemail" placeholder="Email..." required>  
+      <input type="text" ng-model="postnoResidents" placeholder="No. of Resifents..." required>   
+      <input type="text" ng-model="postnoDoubleBeds" placeholder="No. of Double Bedrooms..." required> 
+      <input type="text" ng-model="postnoSingleBeds" placeholder="No. of Single Bedrooms..." required> 
+      <input type="text" ng-model="postwaterSupply" placeholder="Water Supply..." required> 
+      <input ng-click='addPost()' type="submit" value="Submit" >
+    </form>
+  </div>
 <ul class='list-group'>
   <li ng-repeat="post in posts | orderBy:'-date'" class='list-group-item'>
     <span>{{ post.fileRef }} {{ post.prefix }} {{ post.firstName }} {{ post.lastName }} {{ post.address }} {{ post.townland }} {{ post.phone }} {{ post.fax }} {{ post.email }} {{ post.noResidents }} {{ post.noDoubleBeds }} {{ post.noSingleBeds }} {{ post.waterSupply }}</span>
   </li>
 </ul>
 
-  <section class="ui segment" style="background-color: #A0A0A0;">
-    <form action="/register" method="POST">
-      <input type="checkbox" id="usCitizen" name="usCitizen"> <label
-        for="usCitizen">Tick to confirm you are a citizen of the USA</label>
-      <div class="ui two column grid">
-        <div class="column">
-          <div class="ui fluid form segment">
-            <h3 class="ui header">Sign Up</h3>
-            <div class="two fields">
-              <div class="field">
-                <label>First Name</label> <input placeholder="First Name"
-                  name="firstName" type="text" required>
-              </div>
-              <div class="field">
-                <label>Last Name</label> <input placeholder="Last Name"
-                  name="lastName" type="text" required>
-              </div>
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!doctype html>
+<html>
+<head>
+  <title>Wedo a Corporate Flat bootstrap Responsive website Template | Home :: w3layouts</title>
+  <link href="style.css" type="text/css" rel="stylesheet" media="all">
+  <link href="bootstrap.css" type="text/css" rel="stylesheet" media="all">
+  <link rel="stylesheet" type="text/css" href="default.css" />
+  <link rel="stylesheet" type="text/css" href="component.css" />
+  <!--web-font-->
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+  <!--//web-font-->
+  <!-- Custom Theme files -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="Wedo Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+    Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+  <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <!-- //Custom Theme files -->
+  <!-- js -->
+  <script src="js/jquery.min.js"></script>
+  <!-- //js --> 
+  <!-- start-smoth-scrolling-->
+  <script type="text/javascript" src="js/move-top.js"></script>
+  <script type="text/javascript" src="js/easing.js"></script> 
+  <script type="text/javascript" src="js/modernizr.custom.53451.js"></script>
+  <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $(".scroll").click(function(event){   
+          event.preventDefault();
+          $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+        });
+      });
+  </script>
+  <!--//end-smoth-scrolling-->
+  <script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
+        <script type="text/javascript">
+          $(document).ready(function () {
+              $('#horizontalTab').easyResponsiveTabs({
+                  type: 'default', //Types: default, vertical, accordion           
+                  width: 'auto', //auto or any width like 600px
+                  fit: true   // 100% fit in a container
+              });
+          });
+  </script>
+</head>
+<body>
+  <!--header-->
+  <div class="header">
+    <div class="container">
+      <div class="col-md-9 top-nav">
+        <span class="menu"><img src="images/menu-icon.png" alt=""/></span>
+        <ul class="nav1">
+          <li><a href="index.html" class="active">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="portfolio.html">PORTFOLIO</a></li>
+          <li><a href="samplepage.html">SAMPLE PAGE</a></li>
+          <li><a href="contact.html" >CONTACT</a></li>
+        </ul> 
+        <!-- script-for-menu -->
+         <script>
+           $( "span.menu" ).click(function() {
+           $( "ul.nav1" ).slideToggle( 300, function() {
+           // Animation complete.
+            });
+           });
+        </script>
+        <!-- /script-for-menu -->
+      </div>
+    </div>  
+  </div>
+  <!--//header-->
+  <!--services-->
+  <div class="services">
+    <div class="container">
+      <h3>OUR SERVICES</h3>
+      <div class="services-grids">
+        <div class="col-md-4 services-grids-info">
+          <div class="srvs-image">
+            <a href="#"></a>
+          </div>
+          <div class="img-title">
+            <h4>SITE INVESTIGATION<br>FORM</h4>
+          </div>
+          <div class="clearfix"> </div>
+          <p>Complete and save site characteristics to a database for easy retrieval
+            and sharing with Engineering collegues.</p>
+        </div>
+        <div class="col-md-4 services-grids-info">
+          <div class="srvs-image">
+            <a href="#" class="camera active"></a>
+          </div>
+          <div class="img-title">
+            <h4>VIEW<br>DATA</h4>
+          </div>
+          <div class="clearfix"> </div>
+          <p>View recorded data relating to site-investigations carried out, or search for 
+            a specific report.</p>
+        </div>
+        <div class="col-md-4 services-grids-info">
+          <div class="srvs-image">
+            <a href="#" class="support"></a>
+          </div>
+          <div class="img-title">
+            <h4>CONFERENCE<br>ROOM</h4>
+          </div>
+          <div class="clearfix"> </div>
+          <p>Create a conference room to talk to collegues or customers via our video chat function.</p>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+    </div>
+  </div>
+  <!--//services-->
+  <!--portfolio-->
+  <div class="portfolio services">
+    <div class="container">
+      <h3>LOVELY PORTFOLIO</h3>
+      <div class="portfolio-info">
+        <div class="col-md-4 portfolio-grids">
+          <div class="port-grids">
+            <div class="port-text">
+              <h5>AMPERSAND & COFFEE</h5>
+              <span>24 January 2014</span>
             </div>
-            <div class="two fields">
-              <div class="field">
-                <label>Age</label> <input placeholder="Age" type="text"
-                  name="age" required>
-              </div>
-              <div class="field">
-                <label>Location</label> <input placeholder="Location"
-                  type="text" name="location" required>
-              </div>
+            <div class="port-image">
+              <img src="images/img1.jpg" alt=""/>
             </div>
-            <div class="two fields">
-              <div class="field">
-                <label>Address 1</label> <input placeholder="Address 1"
-                  type="text" name="address1" required>
-              </div>
-              <div class="field">
-                <label>Address 2</label> <input placeholder="Address 2"
-                  type="text" name="address2" required>
-              </div>
+            <div class="port-caption">
+              <a href="samplepage.html">VIEW MORE</a>
             </div>
-            <div class="two fields">
-              <div class="field">
-                <label>County</label> <input placeholder="County" type="text"
-                  name="county" required>
-              </div>
-              <div class="field">
-                <label>Postal/Zip Code</label> <input
-                  placeholder="Postal/Zip Code" type="text" name="postalCode"
-                  required>
-              </div>
-            </div>
-            <div class="two fields">
-              <div class="field">
-                <label>Country</label> <input placeholder="Country" type="text"
-                  name="country" required>
-              </div>
-            </div>
-            <div class="field">
-              <label>Email</label> <input placeholder="Email" name="email"
-                type="text" required>
-            </div>
-            <div class="field">
-              <label>Password</label> <input type="password" name="password"
-                required>
-            </div>
-            <div class="inline field">
-              <div class="ui checkbox">
-                <input id="conditions" type="checkbox"> <label
-                  for="conditions">I agree to the terms and conditions</label>
-              </div>
-            </div>
-            <button class="ui submit button" style="background-color:#D80000">>Submit</button>
           </div>
         </div>
-      </div>
-    </form>
-  </section>
-
-  <section class="ui raised segment">
-  <div class="ui grid">
-    <div class="ui ten wide column">
-      <div class="ui stacked fluid form segment">
-        <form action="/register" method="POST">
-          <h3 class="ui header">Register</h3>
-          <div class="two fields">
-            <div class="field">
-              <label>First Name</label>
-              <input placeholder="First Name" type="text" name="firstName">
+        <div class="col-md-4 portfolio-grids">
+          <div class="port-grids">
+            <div class="port-text">
+              <h5>HUNTING BADGE</h5>
+              <span>24 January 2014</span>
             </div>
-            <div class="field">
-              <label>Last Name</label>
-              <input placeholder="Last Name" type="text" name="lastName">
+            <div class="port-image">
+              <img src="images/img2.jpg" alt=""/>
+            </div>
+            <div class="port-caption">
+              <a href="samplepage.html">VIEW MORE</a>
             </div>
           </div>
-          <div class="field">
-            <label>Email</label>
-            <input placeholder="Email" type="text" name="email">
+        </div>
+        <div class="col-md-4 portfolio-grids">
+          <div class="port-grids">
+            <div class="port-text">
+              <h5>CLOTHING WEBSITE</h5>
+              <span>24 January 2014</span>
+            </div>
+            <div class="port-image">
+              <img src="images/img3.jpg" alt=""/>
+            </div>
+            <div class="port-caption">
+              <a href="samplepage.html">VIEW MORE</a>
+            </div>
           </div>
-          <div class="field">
-            <label>Password</label>
-            <input type="password" name="password">
-          </div>
-          <button class="ui blue submit button">Submit</button>
-        </form>
+        </div>
+        <div class="clearfix"> </div>
       </div>  
     </div>
-    <aside class="ui five wide column">
-      <img src="/public/images/homer3.png" class="ui medium image">
-    </aside>
   </div>  
-</section>
+  <!--//portfolio-->
+  <!--testimonials-->
+  <div class="testimonials services">
+    <div class="container">
+      <h3>TESTIMONIALS</h3>
+      <div class="sap_tabs">  
+        <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
+          <ul class="resp-tabs-list">
+            <li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><span><img src="images/img4.jpg" alt=""/></span></li>
+            <li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><span><img src="images/img5.jpg" alt=""/></span></li>
+            <li class="resp-tab-item" aria-controls="tab_item-2" role="tab"><span><img src="images/img6.jpg" alt=""/></span></li>
+            <div class="clear"></div>
+          </ul> 
+          <div class="resp-tabs-container">
+            <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">       
+              <div class="view view-first">
+                <h5>FILAN FISTEKU</h5>
+                <p>Donec libero dui, scelerisque ac augue id, tristique ullamcorper elit. Nam ultrices, lacus vitae adipiscing aliquet, metus ipsum imperdiet libero, vitae dignissim sapien diam ac nibh convallis.</p>
+              </div>
+            </div>
+            <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
+              <div class="view view-first">
+                <h5>ULLAMCORPER FILAN </h5>
+                <p>Scelerisque ac augue id Donec libero dui, , tristique ullamcorper elit. Nam ultrices, lacus vitae adipiscing aliquet, metus ipsum imperdiet libero, vitae dignissim sapien diam ac nibh convallis.</p>
+              </div>
+            </div>
+            <div class="tab-1 resp-tab-content" aria-labelledby="tab_item-2">
+              <div class="view view-first">
+                <h5>SCELERISQUE AUGUE</h5>
+                <p>Nam ultrices lacus vitae adipiscing aliquet, metus ipsum imperdiet libero, vitae dignissim sapientristique Donec libero dui, scelerisque ac augue id,  ullamcorper elit,diam ac nibh convallis.</p>
+              </div>
+            </div>
+          </div>  
+        </div>  
+      </div>      
+    </div>
+  </div>  
+  <!--//testimonials-->
+  <div class="footer">
+    <div class="container">
+      <div class="footer-right">
+        <p>© 2015 All rights reserved | Template by <a href="http://w3layouts.com/"> W3layouts</a></p>
+      </div>
+    </div>  
+  </div>
+  <!--smooth-scrolling-of-move-up-->
+    <script type="text/javascript">
+                  $(document).ready(function() {
+                    /*
+                    var defaults = {
+                        containerID: 'toTop', // fading element id
+                      containerHoverID: 'toTopHover', // fading element hover id
+                      scrollSpeed: 1200,
+                      easingType: 'linear' 
+                    };
+                    */
+                    
+                    $().UItoTop({ easingType: 'easeOutQuart' });
+                    
+                  });
+                </script>
+          <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+  <!--//smooth-scrolling-of-move-up-->    
+</body>
+</html>
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!doctype html>
+<html>
+<head>
+  <title>Wedo a Corporate Flat bootstrap Responsive website Template | Contact :: w3layouts</title>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+  <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+  <link rel="stylesheet" type="text/css" href="css/default.css" />
+  <link rel="stylesheet" type="text/css" href="css/component.css" />
+  <!--web-font-->
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+  <!--//web-font-->
+  <!-- Custom Theme files -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="Wedo Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+    Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+  <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <!-- //Custom Theme files -->
+  <!-- js -->
+  <script src="js/jquery.min.js"></script>
+  <!-- //js --> 
+  <!-- start-smoth-scrolling-->
+  <script type="text/javascript" src="js/move-top.js"></script>
+  <script type="text/javascript" src="js/easing.js"></script> 
+  <script type="text/javascript" src="js/modernizr.custom.53451.js"></script>
+  <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $(".scroll").click(function(event){   
+          event.preventDefault();
+          $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+        });
+      });
+  </script>
+  <!--//end-smoth-scrolling-->
+  <script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
+        <script type="text/javascript">
+          $(document).ready(function () {
+              $('#horizontalTab').easyResponsiveTabs({
+                  type: 'default', //Types: default, vertical, accordion           
+                  width: 'auto', //auto or any width like 600px
+                  fit: true   // 100% fit in a container
+              });
+          });
+  </script>
+</head>
+<body>
+  <!--header-->
+  <div class="header">
+    <div class="social-icons">
+        <ul>
+          <li><a href="#"> </a></li>
+          <li><a href="#" class="fb"> </a></li>
+          <li><a href="#" class="in"> </a></li>
+          <li><a href="#" class="dott"> </a></li>
+        </ul>
+      </div>
+    <div class="container">
+      <div class="col-md-9 top-nav">
+        <span class="menu"><img src="images/menu-icon.png" alt=""/></span>
+        <ul class="nav1">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="portfolio.html">PORTFOLIO</a></li>
+          <li><a href="samplepage.html">SAMPLE PAGE </a></li>
+          <li><a href="contact.html" class="active">CONTACT</a></li>
+        </ul> 
+        <!-- script-for-menu -->
+         <script>
+           $( "span.menu" ).click(function() {
+           $( "ul.nav1" ).slideToggle( 300, function() {
+           // Animation complete.
+            });
+           });
+        </script>
+        <!-- /script-for-menu -->
+      </div>
+      <div class="col-md-3 header-logo">
+        <a href="index.html"><img src="images/logo.png" alt="logo"/></a>
+      </div>  
+      <div class="clearfix"> </div>
+    </div>  
+  </div>
+  <!--header-->
+  <!--contact-->
+  <div class="contact">
+    <div class="container">
+      <div class="services">
+        <h3>CONTACT US</h3>
+      </div>
+      <div class="map">
+        <h4>GET IN TOUCH</h4>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.25176871577!2d78.40804555!3d17.4123487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHyderabad%2C+Telangana!5e0!3m2!1sen!2sin!4v1428490908988"  frameborder="0" style="border:0"></iframe>
+      </div>
+      <div class="contact-infom">
+        <h4>CONTACT INFO</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,sheets containing Lorem Ipsum passages, 
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.It was popularised in the 1960s with the release of Letraset
+            and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+      </div>  
+      <div class="address">
+        <div class="address-left">
+          <h4>Address1 :</h4>
+          <p>Eiusmod Tempor inc</p>
+          <p>9560 St Dolore Place,</p>
+          <p>Telephone : +2 800 544 6035</p>
+          <p>FAX : +1 800 889 4444</p>
+          <p>Email : <a href="mailto:example@email.com">mail@example.com</a></p>
+        </div>
+        <div class="address-left">
+          <h4>Address2 :</h4>
+          <p>Tempor Eiusmod  inc</p>
+          <p>9560 St Dolore Place,</p>
+          <p>Telephone : +1 800 300 5555</p>
+          <p>FAX : +1 100 889 9466</p>
+          <p>Email : <a href="mailto:example@email.com">mail@example.com</a></p>
+        </div>  
+        <div class="clearfix"> </div>
+      </div>
+      <div class="contact-form">
+        <h4>CONTACT FORM</h4>
+        <form>
+          <input type="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
+          <input type="email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
+          <input type="text" value="Telephone" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Telephone';}" required="">
+          <textarea type="text"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
+          <input type="submit" value="Submit" >
+        </form>
+      </div>
+      
+    </div>
+  </div>
+  <div class="footer">
+    <div class="container">
+      <div class="footer-right">
+        <p>© 2015 All rights reserved | Template by <a href="http://w3layouts.com/"> W3layouts</a></p>
+      </div>
+    </div>  
+  </div>
+  <!--smooth-scrolling-of-move-up-->
+    <script type="text/javascript">
+                  $(document).ready(function() {
+                    /*
+                    var defaults = {
+                        containerID: 'toTop', // fading element id
+                      containerHoverID: 'toTopHover', // fading element hover id
+                      scrollSpeed: 1200,
+                      easingType: 'linear' 
+                    };
+                    */
+                    
+                    $().UItoTop({ easingType: 'easeOutQuart' });
+                    
+                  });
+                </script>
+          <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+  <!--//smooth-scrolling-of-move-up-->
+</body>
+</html> 
+
+  <div class="contact-form">
+  <h3  style="color:white"> SITE INVESTIGATION FORM</h3>
+  <P></P>
+  <h4  style="color:white"> 1.0 GENERAL DETAILS</h4>
+    <form>
+      <input type="text" ng-model="postBody"placeholder="Username..." required>
+      <input type="text" ng-model="password" placeholder="Password..." required>
+      <input type="text" ng-model="postprefix"  value="prefix" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'prefix';}" required="">
+      <input type="text" ng-model="postfirstName"  value="First Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'First Name';}" required="">
+      <input type="text" ng-model="postlastName" value="Last Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Last Name';}" required="">
+      <input type="text" ng-model="postaddress"   value="Address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Address';}" required="">
+      <input type="text" ng-model="posttownland"  value="Townland" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Townland';}" required="">
+      <input type="text" ng-model="postphone"  value="Phone" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Phone';}" required="">
+      <input type="text" ng-model="postemail"  value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
+      <input type="text" ng-model="postnoResidents" value="No. Residents" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'No. Residents';}" required="">
+      <input type="text" ng-model="postfax"  value="Fax" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Fax';}" required="">
+      <input type="text" ng-model="postnoDoubleBeds" value="Double Beds" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Double Beds';}" required="">
+      <input type="text" ng-model="postnoSingleBeds" value="No. Single Beds" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Single Beds';}" required="">
+      <input type="text" ng-model="postwaterSupply"   value="Address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Address';}" required="">
+  <H4  style="color:white">2.0 GENERAL DETAILS</h4>

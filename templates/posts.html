@@ -27,9 +27,9 @@
 </form>
 
   <div class="contact-form">
-  <h3  style="color:white"> SITE INVESTIGATION FORM</h3>
+  <h3 style="color:white"> SITE INVESTIGATION FORM</h3>
   <P></P>
-  <h4  style="color:white"> 1.0 GENERAL DETAILS</h4>
+  <h4 style="color:white"> 1.0 GENERAL DETAILS</h4>
     <form>
       <input type="text" ng-model="postBody" placeholder="Body..." required>
       <input type="text" ng-model="postfileRef" placeholder="File Reference..." required>
@@ -45,21 +45,142 @@
       <input type="text" ng-model="postnoDoubleBeds" placeholder="No. of Double Bedrooms..." required> 
       <input type="text" ng-model="postnoSingleBeds" placeholder="No. of Single Bedrooms..." required> 
       <input type="text" ng-model="postwaterSupply" placeholder="Water Supply..." required> 
-  <H4  style="color:white">2.0 GENERAL DETAILS</h4>
+  <h4 style="color:white">2.0 GENERAL DETAILS</h4>
       <input type="text" ng-model="soilType" placeholder="Soil Type..." required>
       <input type="text" ng-model="aquifer" placeholder="Aquifer Type..." required>
-      <input type="text" ng-model="postprefix" placeholder="File Reference..." required>  
-      <input type="text" ng-model="postfirstName" placeholder="First Name..." required>  
-      <input type="text" ng-model="postlastName" placeholder="Last Name..." required> 
-      <input type="text" ng-model="postaddress" placeholder="Address..." required>   
-      <input type="text" ng-model="posttownland" placeholder="Townland..." required> 
-      <input type="text" ng-model="postphone" placeholder="Phone Number..." required> 
-      <input type="text" ng-model="postfax" placeholder="Fax Number..." required>  
-      <input type="text" ng-model="postemail" placeholder="Email..." required>  
-      <input type="text" ng-model="postnoResidents" placeholder="No. of Resifents..." required>   
-      <input type="text" ng-model="postnoDoubleBeds" placeholder="No. of Double Bedrooms..." required> 
-      <input type="text" ng-model="postnoSingleBeds" placeholder="No. of Single Bedrooms..." required> 
-      <input type="text" ng-model="postwaterSupply" placeholder="Water Supply..." required> 
+      <input type="text" ng-model="vulnerability" placeholder="Vulnerability..." required>  
+      <input type="text" ng-model="bedrockType" placeholder="Bedrock Type..." required>  
+      <input type="text" ng-model="Water Scheme" placeholder="Public/Group water schemes within 1km..." required>
+      <input type="text" ng-model="gwProtection" placeholder="Ground water protection scheme..." required>
+      <input type="text" ng-model="sourceProtection" placeholder="Source protection area..." required>
+      <input type="text" ng-model="gwResponse" placeholder="Ground water protection response..." required>
+      <input type="text" ng-model="sigSites" placeholder="Prescence of significant sites..." required>
+      <input type="text" ng-model="pastExp" placeholder="Past experience in area..." required>  
+      <textarea type="text" ng-model="comments1" placeholder="Comments..." required></textarea>
+  <h4 style="color:white">3.0 ON-SITE ASSESSMENT</h4>
+  <h4 style="color:white">3.1 VISUAL ASSESSMENT</h4>
+      <input type="text" ng-model="landscapePos" placeholder="Landscape Position..." required>
+      <input type="text" ng-model="slope" placeholder="Slope..." required>
+      <h4 style="color:white">Surface features within a minimum of 250m (Distance to features should be noted in metres)</h4>
+      <input type="text" ng-model="houses" placeholder="Houses..." required>
+      <input type="text" ng-model="existingLandUse" placeholder="Existing land use..." required>
+      <input type="text" ng-model="vegitation" placeholder="Vegitation indicators..." required>
+      <input type="text" ng-model="gwFlow" placeholder="Ground water flow direction..." required>
+      <input type="text" ng-model="groundCond" placeholder="Ground condition..." required>
+      <input type="text" ng-model="siteBound" placeholder="Sites Boundaries..." required>
+      <input type="text" ng-model="roads" placeholder="Roads..." required>
+      <input type="text" ng-model="outcrops" placeholder="Outcrops (Bedrock And/Or Subsoil)..." required>
+      <input type="text" ng-model="ponding" placeholder="Surface water ponding..." required>
+      <input type="text" ng-model="lakes" placeholder="Lakes..." required>
+      <input type="text" ng-model="beaches" placeholder="Beaches/Shellfish..." required>
+      <input type="text" ng-model="wetlands" placeholder="Areas/Wetlands..." required>
+      <input type="text" ng-model="karst" placeholder="Karst features..." required>
+      <input type="text" ng-model="watercourse" placeholder="Watercourse/Stream..." required>
+      <input type="text" ng-model="springs" placeholder="Springs/Wells..." required>
+      <p style="color:white">Integrate the information above in order to comment on: the potential suitability of the site, potemtial targets at risk, the suitability of the site to treat the wastewater and the location of the proposed system within the site</p>
+      <textarea type="text" ng-model="comments2" placeholder="Comments..." required></textarea>
+      <h4 style="color:white">3.2 TRIAL HOLE EVALUATION</h4>
+      <textarea type="text" ng-model="comments3" placeholder="Comments..." required></textarea>
+      <h4 style="color:white">3.3 PRE-SOAK T-TEST</h4>
+      <P style="color:white">Date and time pre-soak started
+      <p style="color:white">T-Test Hole 1
+      <input type="text" ng-model="test1date" placeholder="Test hole 1 date..." required>
+      <input type="text" ng-model="test1time" placeholder="Test hole 1 time..." required>
+      <p style="color:white">T-Test Hole 2
+      <input type="text" ng-model="test2date" placeholder="Test hole 2 date..." required>
+      <input type="text" ng-model="test2time" placeholder="Test hole 2 time..." required>
+      <p style="color:white">T-Test Hole 3
+      <input type="text" ng-model="test3date" placeholder="Test hole 3 date..." required>
+      <input type="text" ng-model="test3time" placeholder="Test hole 3 time..." required>
+      <h4 style="color:white">3.4 PERCOLATION T-TEST</h4>
+      <h5 style="color:white">T-TEST 1.1</h4>
+      <input type="text" ng-model="test111" placeholder="Start time (at 300 mm)..." required>
+      <input type="text" ng-model="test112" placeholder="Finish time (at 200mm)..." required>
+      <input type="text" ng-model="avg111" placeholder="Average t(min)..." required>
+      <h5 style="color:white">T-TEST 1.2</h4>
+      <input type="text" ng-model="test121" placeholder="Start time (at 300 mm)..." required>
+      <input type="text" ng-model="test122" placeholder="Finish time (at 200mm)..." required>
+      <input type="text" ng-model="avg121" placeholder="Average t(min)..." required>
+      <h5 style="color:white">T-TEST 1.3</h4>
+      <input type="text" ng-model="test131" placeholder="Start time (at 300 mm)..." required>
+      <input type="text" ng-model="test132" placeholder="Finish time (at 200mm)..." required>
+      <input type="text" ng-model="avg131" placeholder="Average t(min)..." required>
+      <h5 style="color:white">T-TEST 2.1</h4>
+      <input type="text" ng-model="test211" placeholder="Start time (at 300 mm)..." required>
+      <input type="text" ng-model="test212" placeholder="Finish time (at 200mm)..." required>
+      <input type="text" ng-model="avg211" placeholder="Average t(min)..." required>
+      <h5 style="color:white">T-TEST 2.2</h4>
+      <input type="text" ng-model="test221" placeholder="Start time (at 300 mm)..." required>
+      <input type="text" ng-model="test222" placeholder="Finish time (at 200mm)..." required>
+      <input type="text" ng-model="avg221" placeholder="Average t(min)..." required>
+      <h5 style="color:white">T-TEST 2.3</h4>
+      <input type="text" ng-model="test231" placeholder="Start time (at 300 mm)..." required>
+      <input type="text" ng-model="test232" placeholder="Finish time (at 200mm)..." required>
+      <input type="text" ng-model="avg231" placeholder="Average t(min)..." required>
+      <h5 style="color:white">T-TEST 3.1</h4>
+      <input type="text" ng-model="test311" placeholder="Start time (at 300 mm)..." required>
+      <input type="text" ng-model="test312" placeholder="Finish time (at 200mm)..." required>
+      <input type="text" ng-model="avg311" placeholder="Average t(min)..." required>
+      <h5 style="color:white">T-TEST 3.2</h4>
+      <input type="text" ng-model="test321" placeholder="Start time (at 300 mm)..." required>
+      <input type="text" ng-model="test322" placeholder="Finish time (at 200mm)..." required>
+      <input type="text" ng-model="avg321" placeholder="Average t(min)..." required>
+      <h5 style="color:white">T-TEST 3.3</h4>
+      <input type="text" ng-model="test331" placeholder="Start time (at 300 mm)..." required>
+      <input type="text" ng-model="test332" placeholder="Finish time (at 200mm)..." required>
+      <input type="text" ng-model="avg331" placeholder="Average t(min)..." required>
+      <textarea type="text" ng-model="comments4" placeholder="Comments..." required></textarea>
+      <h4 style="color:white">3.5 PRE-SOAK P-TEST</h4>
+      <P style="color:white">Date and time pre-soak started
+      <p style="color:white">P-Test Hole 1
+      <input type="text" ng-model="test1date" placeholder="Test hole 1 date..." required>
+      <input type="text" ng-model="test1time" placeholder="Test hole 1 time..." required>
+      <p style="color:white">P-Test Hole 2
+      <input type="text" ng-model="test2date" placeholder="Test hole 2 date..." required>
+      <input type="text" ng-model="test2time" placeholder="Test hole 2 time..." required>
+      <p style="color:white">P-Test Hole 3
+      <input type="text" ng-model="test3date" placeholder="Test hole 3 date..." required>
+      <input type="text" ng-model="test3time" placeholder="Test hole 3 time..." required>
+      <h4 style="color:white">3.6 PERCOLATION P-TEST</h4>
+      <h5 style="color:white">P-TEST 1.1</h4>
+      <input type="text" ng-model="ptest111" placeholder="Start time (at 300 mm)..." required>
+      <input type="text" ng-model="ptest112" placeholder="Finish time (at 200mm)..." required>
+      <input type="text" ng-model="pavg111" placeholder="Average t(min)..." required>
+      <h5 style="color:white">P-TEST 1.2</h4>
+      <input type="text" ng-model="ptest121" placeholder="Start time (at 300 mm)..." required>
+      <input type="text" ng-model="ptest122" placeholder="Finish time (at 200mm)..." required>
+      <input type="text" ng-model="pavg121" placeholder="Average t(min)..." required>
+      <h5 style="color:white">P-TEST 1.3</h4>
+      <input type="text" ng-model="ptest131" placeholder="Start time (at 300 mm)..." required>
+      <input type="text" ng-model="ptest132" placeholder="Finish time (at 200mm)..." required>
+      <input type="text" ng-model="pavg131" placeholder="Average t(min)..." required>
+      <h5 style="color:white">P-TEST 2.1</h4>
+      <input type="text" ng-model="ptest211" placeholder="Start time (at 300 mm)..." required>
+      <input type="text" ng-model="ptest212" placeholder="Finish time (at 200mm)..." required>
+      <input type="text" ng-model="pavg211" placeholder="Average t(min)..." required>
+      <h5 style="color:white">P-TEST 2.2</h4>
+      <input type="text" ng-model="ptest221" placeholder="Start time (at 300 mm)..." required>
+      <input type="text" ng-model="ptest222" placeholder="Finish time (at 200mm)..." required>
+      <input type="text" ng-model="pavg221" placeholder="Average t(min)..." required>
+      <h5 style="color:white">P-TEST 2.3</h4>
+      <input type="text" ng-model="ptest231" placeholder="Start time (at 300 mm)..." required>
+      <input type="text" ng-model="ptest232" placeholder="Finish time (at 200mm)..." required>
+      <input type="text" ng-model="pavg231" placeholder="Average t(min)..." required>
+      <h5 style="color:white">P-TEST 3.1</h4>
+      <input type="text" ng-model="ptest311" placeholder="Start time (at 300 mm)..." required>
+      <input type="text" ng-model="ptest312" placeholder="Finish time (at 200mm)..." required>
+      <input type="text" ng-model="pavg311" placeholder="Average t(min)..." required>
+      <h5 style="color:white">P-TEST 3.2</h4>
+      <input type="text" ng-model="ptest321" placeholder="Start time (at 300 mm)..." required>
+      <input type="text" ng-model="ptest322" placeholder="Finish time (at 200mm)..." required>
+      <input type="text" ng-model="pavg321" placeholder="Average t(min)..." required>
+      <h5 style="color:white">P-TEST 3.3</h4>
+      <input type="text" ng-model="ptest331" placeholder="Start time (at 300 mm)..." required>
+      <input type="text" ng-model="ptest332" placeholder="Finish time (at 200mm)..." required>
+      <input type="text" ng-model="pavg331" placeholder="Average t(min)..." required>
+      <textarea type="text" ng-model="comments4" placeholder="Comments..." required></textarea>
+
+
       <input ng-click='addPost()' type="submit" value="Submit" >
     </form>
   </div>

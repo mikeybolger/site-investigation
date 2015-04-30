@@ -50,7 +50,7 @@
       <input type="text" ng-model="aquifer" placeholder="Aquifer Type..." required>
       <input type="text" ng-model="vulnerability" placeholder="Vulnerability..." required>  
       <input type="text" ng-model="bedrockType" placeholder="Bedrock Type..." required>  
-      <input type="text" ng-model="Water Scheme" placeholder="Public/Group water schemes within 1km..." required>
+      <input type="text" ng-model="waterScheme" placeholder="Public/Group water schemes within 1km..." required>
       <input type="text" ng-model="gwProtection" placeholder="Ground water protection scheme..." required>
       <input type="text" ng-model="sourceProtection" placeholder="Source protection area..." required>
       <input type="text" ng-model="gwResponse" placeholder="Ground water protection response..." required>
@@ -133,14 +133,14 @@
       <h4 style="color:white">3.5 PRE-SOAK P-TEST</h4>
       <P style="color:white">Date and time pre-soak started
       <p style="color:white">P-Test Hole 1
-      <input type="text" ng-model="test1date" placeholder="Test hole 1 date..." required>
-      <input type="text" ng-model="test1time" placeholder="Test hole 1 time..." required>
+      <input type="text" ng-model="ptest1date" placeholder="Test hole 1 date..." required>
+      <input type="text" ng-model="ptest1time" placeholder="Test hole 1 time..." required>
       <p style="color:white">P-Test Hole 2
-      <input type="text" ng-model="test2date" placeholder="Test hole 2 date..." required>
-      <input type="text" ng-model="test2time" placeholder="Test hole 2 time..." required>
+      <input type="text" ng-model="ptest2date" placeholder="Test hole 2 date..." required>
+      <input type="text" ng-model="ptest2time" placeholder="Test hole 2 time..." required>
       <p style="color:white">P-Test Hole 3
-      <input type="text" ng-model="test3date" placeholder="Test hole 3 date..." required>
-      <input type="text" ng-model="test3time" placeholder="Test hole 3 time..." required>
+      <input type="text" ng-model="ptest3date" placeholder="Test hole 3 date..." required>
+      <input type="text" ng-model="ptest3time" placeholder="Test hole 3 time..." required>
       <h4 style="color:white">3.6 PERCOLATION P-TEST</h4>
       <h5 style="color:white">P-TEST 1.1</h4>
       <input type="text" ng-model="ptest111" placeholder="Start time (at 300 mm)..." required>
@@ -178,15 +178,123 @@
       <input type="text" ng-model="ptest331" placeholder="Start time (at 300 mm)..." required>
       <input type="text" ng-model="ptest332" placeholder="Finish time (at 200mm)..." required>
       <input type="text" ng-model="pavg331" placeholder="Average t(min)..." required>
-      <textarea type="text" ng-model="comments4" placeholder="Comments..." required></textarea>
-
-
+      <textarea type="text" ng-model="comments5" placeholder="Comments..." required></textarea>
+      <h4 style="color:white">4.0 CONCLUSIONS of SITE CHARACTERISATION</h4>
+      <p style="color:white">Integrating the information from the desk study and on-site assessment (i.e. visual assessment, trial hole and percolation tests) above and conclude the type of system(s) that is (are) appropriate. This information is also used to choose the optimum final disposal route of the treated wastewater.
+      <input type="text" ng-model="suitableFor" placeholder="Suitable for septic tank..." required>
+      <input type="text" ng-model="secondaryTreat" placeholder="Secondary treatment type..." required>
+      <h4 style="color:white">5.0 RECCOMENDATION</h4>
+      <input type="text" ng-model="propInstall" placeholder="Proposed to install..." required>
+      <input type="text" ng-model="dischargeTo" placeholder="...And discharge to..." required>
+      <input type="text" ng-model="trenchInv" placeholder="Trench invert level..." required>
+      <p style="color:white">Site specific conditions (e.g. special works, site improvement works testing etc)</p>
+      <h4 style="color:white">6.0 TREATMENT SYSTEM DETAILS</h4>
+      <h5 style="color:white">SYSTEM TYPE: Septic Tank System</h5>
+      <p style="color:white">Tank Capacity(m3)</p>
+      <input type="text" ng-model="propInstallTank" placeholder="Proposed to install..." required>
+      <p style="color:white">Tank Capacity(m3)</p>
+      <input type="text" ng-model="dischargeToTank" placeholder="...And discharge to..." required>
+      <input type="text" ng-model="trenchInvTank" placeholder="Trench invert level..." required>
+      <h5 style="color:white">Percolation Area</h5>
+      <input type="text" ng-model="noTrenches" placeholder="Number of Trenches..." required>
+      <input type="text" ng-model="lengthTrenches" placeholder="Length of trenches..." required>
+      <input type="text" ng-model="invLvlTrench" placeholder="Invert Level (m)..." required>
+      <h5 style="color:white">Mounded Percolation Area</h5>
+      <input type="text" ng-model="moundnoTrenches" placeholder="Number of Trenches..." required>
+      <input type="text" ng-model="moundlengthTrenches" placeholder="Length of trenches..." required>
+      <input type="text" ng-model="moundinvLvlTrench" placeholder="Invert Level (m)..." required>
+      <h4 style="color:white">7.0 SITE ASSESSOR DETAILS</h4>
+      <input type="text" ng-model="company" placeholder="Company Name..." required>
+      <input type="text" ng-model="experience" placeholder="Qualification of assessor..." required>
+      <input type="text" ng-model="insurance" placeholder="Indemnity insurance number..." required>
       <input ng-click='addPost()' type="submit" value="Submit" >
     </form>
   </div>
 <ul class='list-group'>
   <li ng-repeat="post in posts | orderBy:'-date'" class='list-group-item'>
-    <span>{{ post.fileRef }} {{ post.prefix }} {{ post.firstName }} {{ post.lastName }} {{ post.address }} {{ post.townland }} {{ post.phone }} {{ post.fax }} {{ post.email }} {{ post.noResidents }} {{ post.noDoubleBeds }} {{ post.noSingleBeds }} {{ post.waterSupply }}</span>
+    <span>{{ post.fileRef }} {{ post.prefix }} {{ post.firstName }} {{ post.lastName }} {{ post.address }} {{ post.townland }} {{ post.phone }} {{ post.fax }} {{ post.email }} {{ post.noResidents }} {{ post.noDoubleBeds }} {{ post.noSingleBeds }} {{ post.waterSupply }}
+
+    {{ post.soilType }} {{ post.aquifer }} {{ post.vulnerability }} {{ post.bedrockType }} {{ post.waterScheme }} {{ post.gwProtection }} {{ post.sourceProtection}} {{ post.gwResponse }} {{ post.sigSites }} {{ post.pastExp}} {{ post.comments1 }}
+
+    {{ post.landscapePos }} {{ post.slope}} {{ post.houses }} {{ post.existingLandUse }} {{ post.vegitation}} {{ post.gwFlow }} {{ post.groundCond}} {{ post.siteBound }} {{ post.roads }} {{ post.outcrops }} {{ post.ponding }}
+
+    {{ post.lakes }} {{ post.beaches}} {{ post.wetlands }} {{ post.karst }} {{ post.watercourse}} {{ post.springs}} {{ post.comments2 }} 
+
+
+    {{ post.comments3 }}
+
+
+    {{ post.test1date }} {{ post.test1time }} {{ post.test2date }} {{ post.test2time }} {{ post.test3date }} {{ post.test3time }}
+
+    {{ post.test111 }} {{ post.test112 }} {{ post.avg111 }} 
+
+    {{ post.test121 }} {{ post.test122 }} {{ post.avg121 }} 
+
+    {{ post.test131 }} {{ post.test132 }} {{ post.avg131 }} 
+
+
+    {{ post.test211 }} {{ post.test212 }} {{ post.avg211 }} 
+
+    {{ post.test221 }} {{ post.test222 }} {{ post.avg221 }} 
+
+    {{ post.test231 }} {{ post.test232 }} {{ post.avg231 }} 
+
+
+    {{ post.test311 }} {{ post.test312 }} {{ post.avg311 }} 
+
+    {{ post.test321 }} {{ post.test322 }} {{ post.avg321 }} 
+
+    {{ post.test331 }} {{ post.test332 }} {{ post.avg331 }} 
+
+    
+    {{ post.comments4 }} 
+
+
+    {{ post.ptest1date }} {{ post.ptest1time }} 
+
+    {{ post.ptest2date }} {{ post.ptest2time }} 
+
+    {{ post.ptest3date }} {{ post.ptest3time }}
+
+
+
+    {{ post.ptest111 }} {{ post.ptest112 }} {{ post.pavg111 }} 
+
+    {{ post.ptest121 }} {{ post.ptest122 }} {{ post.pavg121 }} 
+
+    {{ post.ptest131 }} {{ post.ptest132 }} {{ post.pavg131 }} 
+
+
+    {{ post.ptest211 }} {{ post.ptest212 }} {{ post.pavg211 }} 
+
+    {{ post.ptest221 }} {{ post.ptest222 }} {{ post.pavg221 }} 
+
+    {{ post.ptest231 }} {{ post.ptest232 }} {{ post.pavg231 }} 
+
+
+    {{ post.ptest311 }} {{ post.ptest312 }} {{ post.pavg311 }} 
+
+    {{ post.ptest321 }} {{ post.ptest322 }} {{ post.pavg321 }} 
+
+    {{ post.ptest331 }} {{ post.ptest332 }} {{ post.pavg331 }} 
+
+    {{ post.comments5 }} 
+
+    {{ post.suitableFor }} {{ post.secondaryTreat }}
+
+
+    {{ post.propInstall }} {{ post.dischargeTo }} {{ post.trenchInv }} 
+
+
+    {{ post.propInstallTank }} {{ post.dischargeToTank }} {{ post.trenchInvTank }} 
+
+    {{ post.noTrenches }} {{ post.lengthTrenches }} {{ post.invLvlTrench }} 
+
+    {{ post.moundnoTrenches }} {{ post.moundlengthTrenches }} {{ post.moundinvLvlTrench }} 
+
+    {{ post.company }} {{ post.experience }} {{ post.insurance }} 
+
+    </span>
   </li>
 </ul>
 

@@ -1,0 +1,164 @@
+<div style="color:red"> Signed in as {{currentUser.username}}   </div>
+<br></br>
+<ul class='list-group'>
+  <div ng-repeat="post in posts | orderBy:'-date'" class='list-group-item'>
+    <span> 
+      <h4>1.0 GENERAL DETAILS</h4>
+
+      <p>File Reference: {{ post.fileRef }}</p>
+
+      <p> Prefix: (Mr)(Mrs)(Ms): {{ post.prefix }} First Name: {{ post.firstName }} LastName: {{ post.lastName }} Address: {{ post.address }} Townland: {{ post.townland }} Phone Number: {{ post.phone }} Fax Number: {{ post.fax }} e-mail: {{ post.email }} Maximum number of residents: {{ post.noResidents }} Number od double bedrooms: {{ post.noDoubleBeds }} Number of singlr bedrooms: {{ post.noSingleBeds }} Proposed Water supply {{ post.waterSupply }}</p>
+
+      <h4>2.0 GENERAL DETAILS (CONT)</h4>
+    
+      <p>Soil Type: {{ post.soilType }} Aquifer Catagory: {{ post.aquifer }} Vulnerability: {{ post.vulnerability }} Bedrock Type: {{ post.bedrockType }} Name of Public/Group Scheme Water Supply Within 1km {{ post.waterScheme }} Ground Water Protection Scheme (Y/N) {{ post.gwProtection }} Source Protection Area: (SI/SO): {{ post.sourceProtection}} Ground Water Protection Response: {{ post.gwResponse }} Presence of Significant Sites (Archaeological, Natural, Historical) {{ post.sigSites }} Past Experience in the Area {{ post.pastExp}} Comments: {{ post.comments1 }}</p>
+
+      <h4>3.0 ON_SITE ASSESSMENT</h4>
+
+      <h5>3.1 Visual Assessment</h5>
+
+      <p>Surface Features within a minimum of 250m (Distance TO Features Should Be Noted In Metres)
+      Landscape Position: {{ post.landscapePos }} Slope: {{ post.slope}} Houses: {{ post.houses }} Existing Land Use: {{ post.existingLandUse }} Vegitation Indicators: {{ post.vegitation}} Ground Water Flow Direction: {{ post.gwFlow }} Ground Condition: {{ post.groundCond}} Site Boundaries: {{ post.siteBound }} Roads: {{ post.roads }} Outcrops (Bedrock And/Or Subsoil): {{ post.outcrops }} Surface Water Ponding: {{ post.ponding }}
+      Lakes: {{ post.lakes }} Beaches/Shellfish: {{ post.beaches}} Areas/Wetlands: {{ post.wetlands }} Karst Features: {{ post.karst }} Watercourse/Stream {{ post.watercourse}} Springs/Wells: {{ post.springs}} Comments: {{ post.comments2 }}</p> 
+
+      <h5>3.2 Trial Hole Evaluation</h5>
+
+      <p>Commenst: {{ post.comments3 }}</p>
+
+      <h5>3.3 Percolation ("T") Test for Deep Subsoils and/or Water Table</h5>
+
+      <h5>T-Test Pre-Soak</h5>
+
+      <p>Test date 1: {{ post.test1date }} Test Time 1: {{ post.test1time }} Test Date 2: {{ post.test2date }} Test Time 2: {{ post.test2time }} Test Date 3: {{ post.test3date }} Test Time 3: {{ post.test3time }}</p>
+
+      <h5>T-Test 1:</h5>
+
+      <p>T-Test 1.1 300: {{ post.test111 }} T-Test 1.1 200: {{ post.test112 }} Test Average 1.1: {{ post.avg111 }}</p>
+
+      <p>T-Test 1.2 300 {{ post.test121 }} T-Test 1.2 200: {{ post.test122 }} Test Average 1.2: {{ post.avg121 }}</p>
+
+      <p>T-Test 1.3 300 {{ post.test131 }} T-Test 1.3 200: {{ post.test132 }} Test Average 1.3: {{ post.avg131 }}</p>
+
+
+      <h5>T-Test 2:</h5>
+
+      <p>T-Test 2.1 300: {{ post.test211 }} T-Test 2.1 200: {{ post.test212 }} Test Average 2.1: {{ post.avg211 }}</p>
+
+      <p>T-Test 2.2 300: {{ post.test221 }} T-Test 2.2 200: {{ post.test222 }} Test Average 2.2: {{ post.avg221 }}</p>
+
+      <p>T-Test 2.3 300: {{ post.test231 }} T-Test 2.3 200: {{ post.test232 }} Test Average 2.3: {{ post.avg231 }}</p>
+
+
+      <h5>T-Test 3:</h5>
+
+      <p>T-Test 3.1 300: {{ post.test311 }} T-Test 3.1 200: {{ post.test312 }} Test Average 3.1: {{ post.avg311 }}</p>
+
+      <p>T-Test 3.2 300: {{ post.test321 }} T-Test 3.2 200: {{ post.test322 }} Test Average 3.1: {{ post.avg321 }}</p>
+
+      <p>T-Test 3.3 300: {{ post.test331 }} T-Test 3.3 200: {{ post.test332 }} Test Average 3.1: {{ post.avg331 }}</p>
+
+     
+      <h6>T-Test Comments:</h5>
+   
+      <p>Comments: {{ post.comments4 }}</p> 
+
+
+      <h5>P-Test Pre-Soak</h5>
+
+      <P>P-Test date 1: {{ post.ptest1date }} P-Test time 1: {{ post.ptest1time }}</p> 
+
+      <p>P-Test date 2: {{ post.ptest2date }} P-Test time 2: {{ post.ptest2time }}</p> 
+
+      <p>P-Test date 3: {{ post.ptest3date }} P-Test time 3: {{ post.ptest3time }}</p>
+
+
+      <h5>P-Test 1:</h5>
+
+      <p>P-Test 1.1 300: {{ post.ptest111 }} P-Test 1.1 200: {{ post.ptest112 }} P-Test Average 1.1: {{ post.pavg111 }}</p>
+
+      <p>P-Test 1.2 300: {{ post.ptest121 }} P-Test 1.2 200: {{ post.ptest122 }} P-Test Average 1.2: {{ post.pavg121 }}</p>
+
+      <p>P-Test 1.3 300: {{ post.ptest131 }} P-Test 1.3 200: {{ post.ptest132 }} P-Test Average 1.3: {{ post.pavg131 }}</p>
+
+
+      <h5>P-Test 2:</h5>
+
+      <p>P-Test 2.1 300: {{ post.ptest211 }} P-Test 2.1 200: {{ post.ptest212 }} P-Test Average 2.1: {{ post.pavg211 }}</p> 
+
+      <p>P-Test 2.2 300: {{ post.ptest221 }} P-Test 2.2 200: {{ post.ptest222 }} P-Test Average 2.2: {{ post.pavg221 }}</p>
+
+      <p>P-Test 2.3 300: {{ post.ptest231 }} P-Test 2.3 200: {{ post.ptest232 }} P-Test Average 2.3: {{ post.pavg231 }}</p> 
+
+
+      <h5>P-Test 3:</h5>
+
+      <p>P-Test 3.1 300: {{ post.ptest311 }} P-Test 3.1 200: {{ post.ptest312 }} P-Test Average 3.1: {{ post.pavg311 }}</p>
+
+      <p>P-Test 3.2 300: {{ post.ptest321 }} P-Test 3.2 200: {{ post.ptest322 }} P-Test Average 3.2: {{ post.pavg321 }}</p>
+
+      <p>P-Test 3.3 300: {{ post.ptest331 }} P-Test 3.3 200: {{ post.ptest332 }} P-Test Average 3.3: {{ post.pavg331 }}</p>
+
+
+      <h5>T-Test Comments:</h5>
+
+      <p>Comments: {{ post.comments5 }}</p> 
+
+
+
+      <h4>4.0 CONCLUSION of SITE CHARACTERISATION</H4>
+
+      <P>Suitable for Septic Tank: {{ post.suitableFor }} Secondary Treatment System: {{ post.secondaryTreat }}</P>
+
+
+      <h4>5.0 RECCOMENDATION</H4>
+
+      <P>Proposed to Install {{ post.propInstall }} and discharge to {{ post.dischargeTo }} Trench Invert Level: {{ post.trenchInv }}</P> 
+
+      <h4>6.0 TREATMENT SYSTEM DETAILS</H4>
+
+      <P>Number of Trenches: {{ post.propInstallTank }} and discharge to  {{ post.dischargeToTank }} Trench Invert Level: {{ post.trenchInvTank }}</P>
+
+      <h5>PERCOLATION AREA</h5>   
+
+      <p>Number of Trenches: {{ post.noTrenches }} Lrngth of Trenches (m): {{ post.lengthTrenches }} Invert Level: {{ post.invLvlTrench }}<p>
+
+      <h5>MOUNDED PERCOLATION AREA</h5> 
+
+      <P>Number of Trenches: {{ post.moundnoTrenches }} Length of Trenches: {{ post.moundlengthTrenches }} Invert Level: {{ post.moundinvLvlTrench }}</P>
+
+      <h4>7.0 SITE ASSESSOR DETAILS</H4> 
+
+      <p>Company Name: {{ post.company }}</P>
+      <p>Past Experience in the Area: {{ post.experience }}</p> 
+      <p>Insurance Details: {{ post.insurance }}<p> 
+    </span>
+  </div>
+</ul>
+  <div class="footer">
+    <div class="container">
+      <div class="footer-right">
+        <p>© 2015 All rights reserved | Template by <a href="http://w3layouts.com/"> W3layouts</a> | Customised By Michael Bolger</p>
+      </div>
+    </div>  
+  </div>
+  <!--smooth-scrolling-of-move-up-->
+    <script type="text/javascript">
+                  $(document).ready(function() {
+                    /*
+                    var defaults = {
+                        containerID: 'toTop', // fading element id
+                      containerHoverID: 'toTopHover', // fading element hover id
+                      scrollSpeed: 1200,
+                      easingType: 'linear' 
+                    };
+                    */
+                    
+                    $().UItoTop({ easingType: 'easeOutQuart' });
+                    
+                  });
+                </script>
+          <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+  <!--//smooth-scrolling-of-move-up-->
+</body>
+</html> 
+

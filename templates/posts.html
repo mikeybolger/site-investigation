@@ -1,35 +1,7 @@
-<h1>General Details</h1>
-
 <div style="color:red"> Signed in as {{currentUser.username}}   </div>
-
-<form role='form'>
-  <div class='form-group'>
-    <div class="input-group">
-      <input ng-model="postBody" class='form-control'>
-      <input ng-model="postfileRef" class='form-control'>
-      <input ng-model="postprefix" class='form-control'>            
-      <input ng-model="postfirstName" class='form-control'>
-      <input ng-model="postlastName" class='form-control'>
-      <input ng-model="postaddress" class='form-control'>
-      <input ng-model="posttownland" class='form-control'>
-      <input ng-model="postphone" class='form-control'>
-      <input ng-model="postfax" class='form-control'>
-      <input ng-model="postemail" class='form-control'>
-      <input ng-model="postnoResidents" class='form-control'>
-      <input ng-model="postnoDoubleBeds" class='form-control'>
-      <input ng-model="postnoSingleBeds" class='form-control'>
-      <input ng-model="postwaterSupply" class='form-control'>
-      <span class='input-group-btn'>
-      <button ng-click='addPost()' class='btn btn-default'>Add Post</button>
-      </span>
-    </div>
-  </div>
-</form>
-
   <div class="contact-form">
   <h3 style="color:white"> SITE INVESTIGATION FORM</h3>
   <P></P>
-  <h4 style="color:white"> 1.0 GENERAL DETAILS</h4>
     <form>
       <input type="text" ng-model="postBody" placeholder="Body..." required>
       <input type="text" ng-model="postfileRef" placeholder="File Reference..." required>
@@ -211,91 +183,138 @@
     </form>
   </div>
 <ul class='list-group'>
-  <li ng-repeat="post in posts | orderBy:'-date'" class='list-group-item'>
-    <span>{{ post.fileRef }} {{ post.prefix }} {{ post.firstName }} {{ post.lastName }} {{ post.address }} {{ post.townland }} {{ post.phone }} {{ post.fax }} {{ post.email }} {{ post.noResidents }} {{ post.noDoubleBeds }} {{ post.noSingleBeds }} {{ post.waterSupply }}
+  <div ng-repeat="post in posts | orderBy:'-date'" class='list-group-item'>
+    <span> 
+      <h4>1.0 GENERAL DETAILS</h4>
 
-    {{ post.soilType }} {{ post.aquifer }} {{ post.vulnerability }} {{ post.bedrockType }} {{ post.waterScheme }} {{ post.gwProtection }} {{ post.sourceProtection}} {{ post.gwResponse }} {{ post.sigSites }} {{ post.pastExp}} {{ post.comments1 }}
+      <p>File Reference: {{ post.fileRef }}</p>
 
-    {{ post.landscapePos }} {{ post.slope}} {{ post.houses }} {{ post.existingLandUse }} {{ post.vegitation}} {{ post.gwFlow }} {{ post.groundCond}} {{ post.siteBound }} {{ post.roads }} {{ post.outcrops }} {{ post.ponding }}
+      <p> Prefix: (Mr)(Mrs)(Ms): {{ post.prefix }} First Name: {{ post.firstName }} LastName: {{ post.lastName }} Address: {{ post.address }} Townland: {{ post.townland }} Phone Number: {{ post.phone }} Fax Number: {{ post.fax }} e-mail: {{ post.email }} Maximum number of residents: {{ post.noResidents }} Number od double bedrooms: {{ post.noDoubleBeds }} Number of singlr bedrooms: {{ post.noSingleBeds }} Proposed Water supply {{ post.waterSupply }}</p>
 
-    {{ post.lakes }} {{ post.beaches}} {{ post.wetlands }} {{ post.karst }} {{ post.watercourse}} {{ post.springs}} {{ post.comments2 }} 
-
-
-    {{ post.comments3 }}
-
-
-    {{ post.test1date }} {{ post.test1time }} {{ post.test2date }} {{ post.test2time }} {{ post.test3date }} {{ post.test3time }}
-
-    {{ post.test111 }} {{ post.test112 }} {{ post.avg111 }} 
-
-    {{ post.test121 }} {{ post.test122 }} {{ post.avg121 }} 
-
-    {{ post.test131 }} {{ post.test132 }} {{ post.avg131 }} 
-
-
-    {{ post.test211 }} {{ post.test212 }} {{ post.avg211 }} 
-
-    {{ post.test221 }} {{ post.test222 }} {{ post.avg221 }} 
-
-    {{ post.test231 }} {{ post.test232 }} {{ post.avg231 }} 
-
-
-    {{ post.test311 }} {{ post.test312 }} {{ post.avg311 }} 
-
-    {{ post.test321 }} {{ post.test322 }} {{ post.avg321 }} 
-
-    {{ post.test331 }} {{ post.test332 }} {{ post.avg331 }} 
-
+      <h4>2.0 GENERAL DETAILS (CONT)</h4>
     
-    {{ post.comments4 }} 
+      <p>Soil Type: {{ post.soilType }} Aquifer Catagory: {{ post.aquifer }} Vulnerability: {{ post.vulnerability }} Bedrock Type: {{ post.bedrockType }} Name of Public/Group Scheme Water Supply Within 1km {{ post.waterScheme }} Ground Water Protection Scheme (Y/N) {{ post.gwProtection }} Source Protection Area: (SI/SO): {{ post.sourceProtection}} Ground Water Protection Response: {{ post.gwResponse }} Presence of Significant Sites (Archaeological, Natural, Historical) {{ post.sigSites }} Past Experience in the Area {{ post.pastExp}} Comments: {{ post.comments1 }}</p>
+
+      <h4>3.0 ON_SITE ASSESSMENT</h4>
+
+      <h5>3.1 Visual Assessment</h5>
+
+      <p>Surface Features within a minimum of 250m (Distance TO Features Should Be Noted In Metres)
+      Landscape Position: {{ post.landscapePos }} Slope: {{ post.slope}} Houses: {{ post.houses }} Existing Land Use: {{ post.existingLandUse }} Vegitation Indicators: {{ post.vegitation}} Ground Water Flow Direction: {{ post.gwFlow }} Ground Condition: {{ post.groundCond}} Site Boundaries: {{ post.siteBound }} Roads: {{ post.roads }} Outcrops (Bedrock And/Or Subsoil): {{ post.outcrops }} Surface Water Ponding: {{ post.ponding }}
+      Lakes: {{ post.lakes }} Beaches/Shellfish: {{ post.beaches}} Areas/Wetlands: {{ post.wetlands }} Karst Features: {{ post.karst }} Watercourse/Stream {{ post.watercourse}} Springs/Wells: {{ post.springs}} Comments: {{ post.comments2 }}</p> 
+
+      <h5>3.2 Trial Hole Evaluation</h5>
+
+      <p>Commenst: {{ post.comments3 }}</p>
+
+      <h5>3.3 Percolation ("T") Test for Deep Subsoils and/or Water Table</h5>
+
+      <h5>T-Test Pre-Soak</h5>
+
+      <p>Test date 1: {{ post.test1date }} Test Time 1: {{ post.test1time }} Test Date 2: {{ post.test2date }} Test Time 2: {{ post.test2time }} Test Date 3: {{ post.test3date }} Test Time 3: {{ post.test3time }}</p>
+
+      <h5>T-Test 1:</h5>
+
+      <p>T-Test 1.1 300: {{ post.test111 }} T-Test 1.1 200: {{ post.test112 }} Test Average 1.1: {{ post.avg111 }}</p>
+
+      <p>T-Test 1.2 300 {{ post.test121 }} T-Test 1.2 200: {{ post.test122 }} Test Average 1.2: {{ post.avg121 }}</p>
+
+      <p>T-Test 1.3 300 {{ post.test131 }} T-Test 1.3 200: {{ post.test132 }} Test Average 1.3: {{ post.avg131 }}</p>
 
 
-    {{ post.ptest1date }} {{ post.ptest1time }} 
+      <h5>T-Test 2:</h5>
 
-    {{ post.ptest2date }} {{ post.ptest2time }} 
+      <p>T-Test 2.1 300: {{ post.test211 }} T-Test 2.1 200: {{ post.test212 }} Test Average 2.1: {{ post.avg211 }}</p>
 
-    {{ post.ptest3date }} {{ post.ptest3time }}
+      <p>T-Test 2.2 300: {{ post.test221 }} T-Test 2.2 200: {{ post.test222 }} Test Average 2.2: {{ post.avg221 }}</p>
 
-
-
-    {{ post.ptest111 }} {{ post.ptest112 }} {{ post.pavg111 }} 
-
-    {{ post.ptest121 }} {{ post.ptest122 }} {{ post.pavg121 }} 
-
-    {{ post.ptest131 }} {{ post.ptest132 }} {{ post.pavg131 }} 
+      <p>T-Test 2.3 300: {{ post.test231 }} T-Test 2.3 200: {{ post.test232 }} Test Average 2.3: {{ post.avg231 }}</p>
 
 
-    {{ post.ptest211 }} {{ post.ptest212 }} {{ post.pavg211 }} 
+      <h5>T-Test 3:</h5>
 
-    {{ post.ptest221 }} {{ post.ptest222 }} {{ post.pavg221 }} 
+      <p>T-Test 3.1 300: {{ post.test311 }} T-Test 3.1 200: {{ post.test312 }} Test Average 3.1: {{ post.avg311 }}</p>
 
-    {{ post.ptest231 }} {{ post.ptest232 }} {{ post.pavg231 }} 
+      <p>T-Test 3.2 300: {{ post.test321 }} T-Test 3.2 200: {{ post.test322 }} Test Average 3.1: {{ post.avg321 }}</p>
 
+      <p>T-Test 3.3 300: {{ post.test331 }} T-Test 3.3 200: {{ post.test332 }} Test Average 3.1: {{ post.avg331 }}</p>
 
-    {{ post.ptest311 }} {{ post.ptest312 }} {{ post.pavg311 }} 
-
-    {{ post.ptest321 }} {{ post.ptest322 }} {{ post.pavg321 }} 
-
-    {{ post.ptest331 }} {{ post.ptest332 }} {{ post.pavg331 }} 
-
-    {{ post.comments5 }} 
-
-    {{ post.suitableFor }} {{ post.secondaryTreat }}
+     
+      <h6>T-Test Comments:</h5>
+   
+      <p>Comments: {{ post.comments4 }}</p> 
 
 
-    {{ post.propInstall }} {{ post.dischargeTo }} {{ post.trenchInv }} 
+      <h5>P-Test Pre-Soak</h5>
+
+      <P>P-Test date 1: {{ post.ptest1date }} P-Test time 1: {{ post.ptest1time }}</p> 
+
+      <p>P-Test date 2: {{ post.ptest2date }} P-Test time 2: {{ post.ptest2time }}</p> 
+
+      <p>P-Test date 3: {{ post.ptest3date }} P-Test time 3: {{ post.ptest3time }}</p>
 
 
-    {{ post.propInstallTank }} {{ post.dischargeToTank }} {{ post.trenchInvTank }} 
+      <h5>P-Test 1:</h5>
 
-    {{ post.noTrenches }} {{ post.lengthTrenches }} {{ post.invLvlTrench }} 
+      <p>P-Test 1.1 300: {{ post.ptest111 }} P-Test 1.1 200: {{ post.ptest112 }} P-Test Average 1.1: {{ post.pavg111 }}</p>
 
-    {{ post.moundnoTrenches }} {{ post.moundlengthTrenches }} {{ post.moundinvLvlTrench }} 
+      <p>P-Test 1.2 300: {{ post.ptest121 }} P-Test 1.2 200: {{ post.ptest122 }} P-Test Average 1.2: {{ post.pavg121 }}</p>
 
-    {{ post.company }} {{ post.experience }} {{ post.insurance }} 
+      <p>P-Test 1.3 300: {{ post.ptest131 }} P-Test 1.3 200: {{ post.ptest132 }} P-Test Average 1.3: {{ post.pavg131 }}</p>
 
+
+      <h5>P-Test 2:</h5>
+
+      <p>P-Test 2.1 300: {{ post.ptest211 }} P-Test 2.1 200: {{ post.ptest212 }} P-Test Average 2.1: {{ post.pavg211 }}</p> 
+
+      <p>P-Test 2.2 300: {{ post.ptest221 }} P-Test 2.2 200: {{ post.ptest222 }} P-Test Average 2.2: {{ post.pavg221 }}</p>
+
+      <p>P-Test 2.3 300: {{ post.ptest231 }} P-Test 2.3 200: {{ post.ptest232 }} P-Test Average 2.3: {{ post.pavg231 }}</p> 
+
+
+      <h5>P-Test 3:</h5>
+
+      <p>P-Test 3.1 300: {{ post.ptest311 }} P-Test 3.1 200: {{ post.ptest312 }} P-Test Average 3.1: {{ post.pavg311 }}</p>
+
+      <p>P-Test 3.2 300: {{ post.ptest321 }} P-Test 3.2 200: {{ post.ptest322 }} P-Test Average 3.2: {{ post.pavg321 }}</p>
+
+      <p>P-Test 3.3 300: {{ post.ptest331 }} P-Test 3.3 200: {{ post.ptest332 }} P-Test Average 3.3: {{ post.pavg331 }}</p>
+
+
+      <h5>T-Test Comments:</h5>
+
+      <p>Comments: {{ post.comments5 }}</p> 
+
+
+
+      <h4>4.0 CONCLUSION of SITE CHARACTERISATION</H4>
+
+      <P>Suitable for Septic Tank: {{ post.suitableFor }} Secondary Treatment System: {{ post.secondaryTreat }}</P>
+
+
+      <h4>5.0 RECCOMENDATION</H4>
+
+      <P>Proposed to Install {{ post.propInstall }} and discharge to {{ post.dischargeTo }} Trench Invert Level: {{ post.trenchInv }}</P> 
+
+      <h4>6.0 TREATMENT SYSTEM DETAILS</H4>
+
+      <P>Number of Trenches: {{ post.propInstallTank }} and discharge to  {{ post.dischargeToTank }} Trench Invert Level: {{ post.trenchInvTank }}</P>
+
+      <h5>PERCOLATION AREA</h5>   
+
+      <p>Number of Trenches: {{ post.noTrenches }} Lrngth of Trenches (m): {{ post.lengthTrenches }} Invert Level: {{ post.invLvlTrench }}<p>
+
+      <h5>MOUNDED PERCOLATION AREA</h5> 
+
+      <P>Number of Trenches: {{ post.moundnoTrenches }} Length of Trenches: {{ post.moundlengthTrenches }} Invert Level: {{ post.moundinvLvlTrench }}</P>
+
+      <h4>7.0 SITE ASSESSOR DETAILS</H4> 
+
+      <p>Company Name: {{ post.company }}</P>
+      <p>Past Experience in the Area: {{ post.experience }}</p> 
+      <p>Insurance Details: {{ post.insurance }}<p> 
     </span>
-  </li>
+  </div>
 </ul>
 
 <!--
@@ -676,7 +695,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   <div class="footer">
     <div class="container">
       <div class="footer-right">
-        <p>© 2015 All rights reserved | Template by <a href="http://w3layouts.com/"> W3layouts</a></p>
+        <p>© 2015 All rights reserved | Template by <a href="http://w3layouts.com/"> W3layouts</a> | Customised By Michael Bolger</p>
       </div>
     </div>  
   </div>
@@ -700,24 +719,3 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   <!--//smooth-scrolling-of-move-up-->
 </body>
 </html> 
-
-  <div class="contact-form">
-  <h3  style="color:white"> SITE INVESTIGATION FORM</h3>
-  <P></P>
-  <h4  style="color:white"> 1.0 GENERAL DETAILS</h4>
-    <form>
-      <input type="text" ng-model="postBody"placeholder="Username..." required>
-      <input type="text" ng-model="password" placeholder="Password..." required>
-      <input type="text" ng-model="postprefix"  value="prefix" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'prefix';}" required="">
-      <input type="text" ng-model="postfirstName"  value="First Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'First Name';}" required="">
-      <input type="text" ng-model="postlastName" value="Last Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Last Name';}" required="">
-      <input type="text" ng-model="postaddress"   value="Address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Address';}" required="">
-      <input type="text" ng-model="posttownland"  value="Townland" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Townland';}" required="">
-      <input type="text" ng-model="postphone"  value="Phone" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Phone';}" required="">
-      <input type="text" ng-model="postemail"  value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
-      <input type="text" ng-model="postnoResidents" value="No. Residents" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'No. Residents';}" required="">
-      <input type="text" ng-model="postfax"  value="Fax" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Fax';}" required="">
-      <input type="text" ng-model="postnoDoubleBeds" value="Double Beds" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Double Beds';}" required="">
-      <input type="text" ng-model="postnoSingleBeds" value="No. Single Beds" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Single Beds';}" required="">
-      <input type="text" ng-model="postwaterSupply"   value="Address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Address';}" required="">
-  <H4  style="color:white">2.0 GENERAL DETAILS</h4>

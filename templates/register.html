@@ -1,11 +1,37 @@
-<form ng-submit="register(username, password)">
-  <div class="form-group">
-    <label>Username</label>
-    <input class="form-control" type="text" ng-model="username">
+ <div class="contact-form">
+        <h4>LOGIN</h4>
+        <form ng-submit="register(username, password)">
+          <input type="text" ng-model="username" placeholder="Username..." required>
+          <input type="text" ng-model="password" placeholder="Password..." required>
+          <input type="submit" value="Submit" >
+        </form>
+      </div>   
+      <div style="color:red"> Signed in as {{currentUser.username}}   </div>
+    </div>
+    </div>
   </div>
-  <div class="form-group">
-    <label>Password</label>
-    <input class="form-control" type="password" ng-model="password">
+  <div class="footer">
+    <div class="container">
+      <div class="footer-right">
+        <p>© 2015 All rights reserved | Template by <a href="http://w3layouts.com/"> W3layouts</a> | Customised by Michael Bolger</p>
+      </div>
+    </div>  
   </div>
-  <input class="btn btn-success btn-lg btn-block" type="submit" value="Register">
-</form>
+  <!--smooth-scrolling-of-move-up-->
+    <script type="text/javascript">
+                  $(document).ready(function() {
+                    /*
+                    var defaults = {
+                        containerID: 'toTop', // fading element id
+                      containerHoverID: 'toTopHover', // fading element hover id
+                      scrollSpeed: 1200,
+                      easingType: 'linear' 
+                    };
+                    */
+                    
+                    $().UItoTop({ easingType: 'easeOutQuart' });
+                    
+                  });
+                </script>
+          <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+  <!--//smooth-scrolling-of-move-up-->

@@ -185,23 +185,42 @@
 <ul class='list-group'>
   <div ng-repeat="post in posts | orderBy:'-date'" class='list-group-item'>
     <span> 
+      
+      <h3>SITE INVESTIGATION REPORT</h3>
+
       <h4>1.0 GENERAL DETAILS</h4>
 
       <p>File Reference: {{ post.fileRef }}</p>
 
-      <p> Prefix: (Mr)(Mrs)(Ms): {{ post.prefix }} First Name: {{ post.firstName }} LastName: {{ post.lastName }} Address: {{ post.address }} Townland: {{ post.townland }} Phone Number: {{ post.phone }} Fax Number: {{ post.fax }} e-mail: {{ post.email }} Maximum number of residents: {{ post.noResidents }} Number od double bedrooms: {{ post.noDoubleBeds }} Number of singlr bedrooms: {{ post.noSingleBeds }} Proposed Water supply {{ post.waterSupply }}</p>
+      <p> Prefix: (Mr)(Mrs)(Ms): {{ post.prefix }} First Name: {{ post.firstName }} LastName: {{ post.lastName }} Address: {{ post.address }} Townland: {{ post.townland }} 
+      <p>Phone Number: {{ post.phone }} Fax Number: {{ post.fax }} e-mail: {{ post.email }}</p> 
+      <p>Maximum number of residents: {{ post.noResidents }} Number of double bedrooms: {{ post.noDoubleBeds }} Number of single bedrooms: {{ post.noSingleBeds }}</p>
+      <p>Proposed Water supply {{ post.waterSupply }}</p>
 
       <h4>2.0 GENERAL DETAILS (CONT)</h4>
     
-      <p>Soil Type: {{ post.soilType }} Aquifer Catagory: {{ post.aquifer }} Vulnerability: {{ post.vulnerability }} Bedrock Type: {{ post.bedrockType }} Name of Public/Group Scheme Water Supply Within 1km {{ post.waterScheme }} Ground Water Protection Scheme (Y/N) {{ post.gwProtection }} Source Protection Area: (SI/SO): {{ post.sourceProtection}} Ground Water Protection Response: {{ post.gwResponse }} Presence of Significant Sites (Archaeological, Natural, Historical) {{ post.sigSites }} Past Experience in the Area {{ post.pastExp}} Comments: {{ post.comments1 }}</p>
+      <p>Soil Type: {{ post.soilType }} Aquifer Catagory: {{ post.aquifer }} Vulnerability: {{ post.vulnerability }}</p>
+      <p>Bedrock Type: {{ post.bedrockType }}</p>
+      <p>Name of Public/Group Scheme Water Supply Within 1km {{ post.waterScheme }} Ground Water Protection Scheme (Y/N) {{ post.gwProtection }} Source Protection Area: (SI/SO): {{ post.sourceProtection}}</p> 
+      <p>Ground Water Protection Response: {{ post.gwResponse }} 
+      <p>Presence of Significant Sites (Archaeological, Natural, Historical) {{ post.sigSites }}</p>
+      <p>Past Experience in the Area {{ post.pastExp}}</p>
+      <p>Comments: {{ post.comments1 }}</p>
 
       <h4>3.0 ON_SITE ASSESSMENT</h4>
 
       <h5>3.1 Visual Assessment</h5>
 
-      <p>Surface Features within a minimum of 250m (Distance TO Features Should Be Noted In Metres)
-      Landscape Position: {{ post.landscapePos }} Slope: {{ post.slope}} Houses: {{ post.houses }} Existing Land Use: {{ post.existingLandUse }} Vegitation Indicators: {{ post.vegitation}} Ground Water Flow Direction: {{ post.gwFlow }} Ground Condition: {{ post.groundCond}} Site Boundaries: {{ post.siteBound }} Roads: {{ post.roads }} Outcrops (Bedrock And/Or Subsoil): {{ post.outcrops }} Surface Water Ponding: {{ post.ponding }}
-      Lakes: {{ post.lakes }} Beaches/Shellfish: {{ post.beaches}} Areas/Wetlands: {{ post.wetlands }} Karst Features: {{ post.karst }} Watercourse/Stream {{ post.watercourse}} Springs/Wells: {{ post.springs}} Comments: {{ post.comments2 }}</p> 
+      <p>Surface Features within a minimum of 250m (Distance TO Features Should Be Noted In Metres)</p>
+
+      <p>Landscape Position: {{ post.landscapePos }} Slope: {{ post.slope}}</p>
+      <p>Houses: {{ post.houses }} Existing Land Use: {{ post.existingLandUse }}</p>
+      <p>Vegitation Indicators: {{ post.vegitation}} Ground Water Flow Direction: {{ post.gwFlow }} Ground Condition: {{ post.groundCond}} 
+      <p>Site Boundaries: {{ post.siteBound }} Roads: {{ post.roads }} Outcrops (Bedrock And/Or Subsoil): {{ post.outcrops }}
+      <p>Surface Water Ponding: {{ post.ponding }}</p>
+      <p>Lakes: {{ post.lakes }} Beaches/Shellfish: {{ post.beaches}} Areas/Wetlands: {{ post.wetlands }}</p> 
+      <p>Karst Features: {{ post.karst }} Watercourse/Stream {{ post.watercourse}} Springs/Wells: {{ post.springs}}</p> 
+      <p>Comments: {{ post.comments2 }}</p> 
 
       <h5>3.2 Trial Hole Evaluation</h5>
 

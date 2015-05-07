@@ -1,0 +1,106 @@
+<!--portfolio-->
+  <div class="portfolio services">
+    <div class="container">
+      <h3>NAVIGATE SITE</h3>
+      <div class="portfolio-info">
+        <div class="col-md-4 portfolio-grids">
+          <div class="port-grids">
+            <div class="port-text">
+              <h5>CREATE A PROJECT</h5>
+              <span>Login and Create a Project</span>
+            </div>
+            <div class="port-image">
+              <img src="images/img1.jpg" alt=""/>
+            </div>
+            <div class="port-caption">
+              <a href="samplepage.html">VIEW MORE</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 portfolio-grids">
+          <div class="port-grids">
+            <div class="port-text">
+              <h5> VIEW EXISTING PROJECTS</h5>
+              <span>View Existing Site Investigation Projects on the Site</span>
+            </div>
+            <div class="port-image">
+              <img src="images/img2.jpg" alt=""/>
+            </div>
+            <div class="port-caption">
+              <a href="samplepage.html">VIEW MORE</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 portfolio-grids">
+          <div class="port-grids">
+            <div class="port-text">
+              <h5>CREATE A MEETING ROOM</h5>
+              <span>Video Chat with Collegues Via Web Call</span>
+            </div>
+            <div class="port-image">
+              <img src="images/img3.jpg" alt=""/>
+            </div>
+            <div class="port-caption">
+              <a href="samplepage.html">VIEW MORE</a>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix"> </div>
+      </div>  
+    </div>
+  </div>  
+  <!--//portfolio-->
+  <div class="footer">
+    <div class="container">
+      <div class="footer-right">
+        <p>© 2015 All rights reserved | Template by <a href="http://w3layouts.com/"> W3layouts</a> | Customised By Michael Bolger</p>
+      </div>
+    </div>  
+  </div>
+  <!--smooth-scrolling-of-move-up-->
+    <script type="text/javascript">
+                  $(document).ready(function() {
+                    /*
+                    var defaults = {
+                        containerID: 'toTop', // fading element id
+                      containerHoverID: 'toTopHover', // fading element hover id
+                      scrollSpeed: 1200,
+                      easingType: 'linear' 
+                    };
+                    */
+                    
+                    $().UItoTop({ easingType: 'easeOutQuart' });
+                    
+                  });
+                </script>
+          <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+  <!--//smooth-scrolling-of-move-up-->    
+</body>
+</html>
+
+<html>
+<head>
+<script src="http://simplewebrtc.com/latest.js"></script>
+</head>
+
+<body>
+
+<div id="localVideo" muted></div>
+<div id="remoteVideo"></div>
+
+
+<script>
+var webrtc = new SimpleWebRTC({
+  localVideoEl: 'localVideo',
+  remoteVideosEl: 'remoteVideo',
+  autoRequestMedia: true
+});
+
+webrtc.on('readyToCall', function () {
+  webrtc.joinRoom('site-investigation-2501');
+});
+</script>
+
+</body>
+
+</html>

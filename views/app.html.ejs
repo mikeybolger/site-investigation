@@ -59,9 +59,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
           <li><a href='/#/'>Home</a></li>
           <li><a href='/#/register'>Register</a></li>
           <li><a href='/#/login'>Login</a></li>
-          <li><a href='/#/posts'>Create Project</a></li>
+          <li><a href='/#/posts'>Create</a></li>
           <li><a href='/#/results'>View Projects</a></li>
-          <li><a href='/#/conference'> Conference Room</a></li>
+          <li><a href='/#/conference'> Conference</a></li>
           <li ng-if='currentUser' class='navbar-text navbar-right'>
           Signed in as {{currentUser.username}}
         </li>
@@ -82,38 +82,62 @@ License URL: http://creativecommons.org/licenses/by/3.0/
   <!--services-->
   <div class="services">
     <div class="container">
-      <h3>OUR SERVICES</h3>
+      <h3>QUICK LINKS</h3>
       <div class="services-grids">
         <div class="col-md-4 services-grids-info">
           <div class="srvs-image">
-            <a href="/#/posts"></a>
+            <a class='home' href="/#/"></a>
           </div>
           <div class="img-title">
-            <h4>SITE INVESTIGATION<br>FORM</h4>
+            <h4>Home</h4>
           </div>
           <div class="clearfix"> </div>
-          <p>Complete and save site characteristics to a database for easy retrieval.</p>
         </div>
         <div class="col-md-4 services-grids-info">
           <div class="srvs-image">
-            <a href="/#/samplepage.html" class="camera active"></a>
+            <a class='login' href="/#/login"></a>
           </div>
           <div class="img-title">
-            <h4>VIEW<br>DATA</h4>
+            <h4>LOGIN</h4>
           </div>
           <div class="clearfix"> </div>
-          <p>View recorded data relating to site-investigations carried out, or search for 
-            a specific report.</p>
         </div>
         <div class="col-md-4 services-grids-info">
           <div class="srvs-image">
-            <a href="#" class="support"></a>
+            <a class='posts' href="/#/posts"></a>
           </div>
           <div class="img-title">
-            <h4>CONFERENCE<br>ROOM</h4>
+            <h4>CREATE A<br>PROJECT</h4>
           </div>
           <div class="clearfix"> </div>
-          <p>Create a conference room to talk to collegues or customers via our video chat function.</p>
+        </div>
+
+        <div class="col-md-4 services-grids-info">
+          <div class="srvs-image">
+            <a class='results' href="/#/results"></a>
+          </div>
+          <div class="img-title">
+            <h4>PROJECT<br>DATABASE</h4>
+          </div>
+          <div class="clearfix"> </div>
+        </div>
+        <div class="col-md-4 services-grids-info">
+          <div class="srvs-image">
+            <a class='login' href="/#/login"></a>
+          </div>
+          <div class="img-title">
+            <h4>LOGIN</h4>
+          </div>
+          <div class="clearfix"> </div>
+        </div>
+        <div class="col-md-4 services-grids-info">
+          <div class="srvs-image">
+            <a class='posts' href="/#/posts"></a>
+          </div>
+          <div class="img-title">
+            <h4>CREATE A<br>PROJECT</h4>
+          </div>
+          <div class="clearfix"> </div>
         </div>
       </div>
     </div>

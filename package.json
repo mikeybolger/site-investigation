@@ -17,5 +17,9 @@
     "mongoose": "^4.0.1",
     "morgan": "^1.5.2",
     "npm": "^2.7.6"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.4",
+    "protractor": "^2.0.0"
   }
 }

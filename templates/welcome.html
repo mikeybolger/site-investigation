@@ -1,8 +1,10 @@
 <!--portfolio-->
   <div class="portfolio services">
     <div class="container">
+      <div ng-if='currentUser' style="color:red"> Signed in as {{currentUser.username}}</div>
       <h3>NAVIGATE SITE</h3>
       <div class="portfolio-info">
+
         <div class="col-md-4 portfolio-grids">
           <div class="port-grids">
             <div class="port-text">
@@ -13,10 +15,11 @@
               <img src="images/img1.jpg" alt=""/>
             </div>
             <div class="port-caption">
-              <a href="samplepage.html">VIEW MORE</a>
+              <a href='/#/posts'>Create</a>
             </div>
           </div>
         </div>
+
         <div class="col-md-4 portfolio-grids">
           <div class="port-grids">
             <div class="port-text">
@@ -31,6 +34,7 @@
             </div>
           </div>
         </div>
+
         <div class="col-md-4 portfolio-grids">
           <div class="port-grids">
             <div class="port-text">
@@ -41,7 +45,7 @@
               <img src="images/img3.jpg" alt=""/>
             </div>
             <div class="port-caption">
-              <a href="samplepage.html">VIEW MORE</a>
+              <a href='/#/conference'> Conference</a>
             </div>
           </div>
         </div>
@@ -49,6 +53,7 @@
       </div>  
     </div>
   </div>  
+
   <!--//portfolio-->
   <div class="footer">
     <div class="container">

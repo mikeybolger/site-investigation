@@ -15,9 +15,9 @@ var Post = db.model('Post', {
 	noSingleBeds: 	{ type: String, required: true },
 	waterSupply: 	{ type: String, required: true },
 	//2.0 general Details
-    soilType:    { type: String, required: true },
-    aquifer:     { type: String, required: true },
-    vulnerability:    { type: String, required: true },
+    soilType:       { type: String, required: true },
+    aquifer:        { type: String, required: true },
+    vulnerability:   { type: String, required: true },
     bedrockType:     { type: String, required: true },
     waterScheme:    { type: String, required: true },
     gwProtection:     { type: String, required: true },

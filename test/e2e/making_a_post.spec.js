@@ -2,16 +2,24 @@ describe('making a post', function () {
 	it('log in and creates a PROJECT', function () {
 		browser.get('http://localhost:3000')
 
+		browser.sleep(2000);
+
 		//Simulate login clicked
 		element(by.css('.login')).click()
+
+		browser.sleep(2000);
 
 		//Complete and submit login form
 		element(by.model('username')).sendKeys('q')
 		element(by.model('password')).sendKeys('q')
 		element(by.css('form .submit')).click()
 
+		browser.sleep(1000);
+
 		//Simulate login clicked
 		element(by.css('.posts')).click()
+
+		browser.sleep(1000);
 
 		//Fill in form data and submit
 
@@ -204,22 +212,19 @@ describe('making a post', function () {
 		element(by.model('experience')).sendKeys('Quaifications')
 		element(by.model('insurance')).sendKeys('insurance Details')
 
+		browser.sleep(1000);
+
 		element(by.css('form .submit')).click()
+
+		browser.sleep(1000);
 
 		//Simulate home clicked
 		element(by.css('.home')).click()
 
+		browser.sleep(1000);
+
 		//Simulate results clicked
 		element(by.css('.results')).click()
-
-
-
-
-
-
-
-
-
 
 
 		browser.sleep(10000);
@@ -228,4 +233,16 @@ describe('making a post', function () {
 		//
 
 	})
+	//Uncomment to delete testing database
+	//afterEach(function () {
+		//db.connection.db.dropDatabase()
+	//})
 })
+
+
+
+
+
+
+
+

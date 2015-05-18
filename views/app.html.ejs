@@ -62,7 +62,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
           <li><a href='/#/posts'>Create</a></li>
           <li><a href='/#/results'>View Projects</a></li>
           <li><a href='/#/conference'> Conference</a></li>
-          <li ng-if='currentUser' class='navbar-text navbar-right'>
+          <li ng-if='currentUser' class='navbar-text navbar-right' style="color:red">
           Signed in as {{currentUser.username}}
         </li>
         </ul> 
@@ -88,8 +88,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
           <div class="srvs-image">
             <a class='home' href="/#/"></a>
           </div>
+
           <div class="img-title">
-            <h4>Home</h4>
+            <h4>HOME</h4>
+          </div>
+          <div class="clearfix"> </div>
+        </div>
+        <div class="col-md-4 services-grids-info">
+          <div class="srvs-image">
+            <a class='support' href="/#/register"></a>
+          </div>
+          <div class="img-title">
+            <h4>REGISTER</h4>
+
           </div>
           <div class="clearfix"> </div>
         </div>
@@ -99,15 +110,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
           </div>
           <div class="img-title">
             <h4>LOGIN</h4>
-          </div>
-          <div class="clearfix"> </div>
-        </div>
-        <div class="col-md-4 services-grids-info">
-          <div class="srvs-image">
-            <a class='posts' href="/#/posts"></a>
-          </div>
-          <div class="img-title">
-            <h4>CREATE A<br>PROJECT</h4>
           </div>
           <div class="clearfix"> </div>
         </div>
@@ -121,24 +123,27 @@ License URL: http://creativecommons.org/licenses/by/3.0/
           </div>
           <div class="clearfix"> </div>
         </div>
+
         <div class="col-md-4 services-grids-info">
           <div class="srvs-image">
-            <a class='login' href="/#/login"></a>
-          </div>
-          <div class="img-title">
-            <h4>LOGIN</h4>
-          </div>
-          <div class="clearfix"> </div>
-        </div>
-        <div class="col-md-4 services-grids-info">
-          <div class="srvs-image">
-            <a class='posts' href="/#/posts"></a>
+            <a class="posts" href="/#/posts" ></a>
           </div>
           <div class="img-title">
             <h4>CREATE A<br>PROJECT</h4>
           </div>
           <div class="clearfix"> </div>
         </div>
+
+        <div class="col-md-4 services-grids-info">
+          <div class="srvs-image">
+            <a href="/#/conference" class="camera active"></a>
+          </div>
+          <div class="img-title">
+            <h4>CONFERENCE</h4>
+          </div>
+          <div class="clearfix"> </div>
+        </div>
+
       </div>
     </div>
   </div>

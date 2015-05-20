@@ -23,4 +23,8 @@ angular.module('app')
       return svc.login(username, password)
     })
   }
+
+  svc.logout = function() {
+      $http.defaults.headers.common['X-Auth'] = undefined;
+  }
 })

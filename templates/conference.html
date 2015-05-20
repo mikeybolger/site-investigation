@@ -1,10 +1,10 @@
 <html>
   <head>
-    <div ng-if='currentUser' style="color:red"> Signed in as {{currentUser.username}}</div>
     <script src="http://simplewebrtc.com/latest.js"></script>
   </head>
   <body>
-    <div id="localVideo" muted></div>
+    <div "NOTE: the WebRTC video chat function will only work on chrome and firefox browsers"></div>
+    <div height="300" id="localVideo"></div>
     <div id="remoteVideo"></div>
     <script>
       var webrtc = new SimpleWebRTC({
@@ -13,7 +13,7 @@
       autoRequestMedia: true
     });
       webrtc.on('readyToCall', function () {
-        webrtc.joinRoom('site-investigation-2501');
+        webrtc.joinRoom('site-investigation-test123');
       });
     </script>
   </body>

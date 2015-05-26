@@ -14,12 +14,12 @@ describe('making a post', function () {
 		element(by.model('password')).sendKeys('q')
 		element(by.css('form .submit')).click()
 
-		browser.sleep(1000);
+		browser.sleep(2000);
 
 		//Simulate login clicked
 		element(by.css('.posts')).click()
 
-		browser.sleep(1000);
+		browser.sleep(2000);
 
 		//Fill in form data and submit
 
@@ -212,16 +212,16 @@ describe('making a post', function () {
 		element(by.model('experience')).sendKeys('Quaifications')
 		element(by.model('insurance')).sendKeys('insurance Details')
 
-		browser.sleep(1000);
+		browser.sleep(3000);
 
 		element(by.css('form .submit')).click()
 
-		browser.sleep(1000);
+		browser.sleep(3000);
 
 		//Simulate home clicked
 		element(by.css('.home')).click()
 
-		browser.sleep(1000);
+		browser.sleep(3000);
 
 		//Simulate results clicked
 		element(by.css('.results')).click()

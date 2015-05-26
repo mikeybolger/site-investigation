@@ -3,9 +3,17 @@
     <script src="http://simplewebrtc.com/latest.js"></script>
   </head>
   <body>
+    <br>
     <div "NOTE: the WebRTC video chat function will only work on chrome and firefox browsers"></div>
-    <div height="300" id="localVideo"></div>
-    <div id="remoteVideo"></div>
+
+    <div class="col-md-5 about-info-left">
+        <h4>Remote Video</h4>
+        <div id="remoteVideo"></div>
+        </div>
+        <div class="col-md-7 about-info-right">
+          <h4>Local Video</h4>
+          <div id="localVideo"></div>
+    </div>
     <script>
       var webrtc = new SimpleWebRTC({
       localVideoEl: 'localVideo',
@@ -18,3 +26,4 @@
     </script>
   </body>
 </html>
+
